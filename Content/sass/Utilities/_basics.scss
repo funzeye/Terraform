@@ -1,0 +1,11 @@
+// STEP ONE: BASICS ================================================
+
+// two variables that will be used throughout your design;
+// $gutterwidth for horizontal spacing and $baselineheight for vertical rhythm
+
+$gutterwidth 					: 1em;
+$verticalrythm                  : 1.5em;
+
+// Does your design needs a maximum width to maintain readable line lengths? 
+$maxwidthpx						: 900px;
+$maxwidth						: 90rem;

@@ -1,0 +1,17 @@
+$linkcolor:palette(orange, dark);
+$linkcolorhover:palette(orange, light);
+
+a {
+  @include transition(color 0.1s linear);
+  color: $linkcolor;
+  text-decoration: none;
+
+  &:hover {
+    //color: $linkcolorhover;
+  }
+
+  &:active, &:focus {
+    //color: $linkcolorhover;
+    outline: none;
+  }
+}

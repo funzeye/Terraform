@@ -1,0 +1,39 @@
+﻿// Set values for default responsive design breakpoints
+// Ems are default, but you may use px if you prefer
+// 3 are included but you may add more
+// These are default sizes - it is important to let the content dictate the breakpoints you use!! So make sure you create your own breakpoints!!
+// Use http://bradfrost.com/demo/ish to find breakpoints
+
+$bp-small : 30em;  	// 480px		
+$bp-medium: 48em;  	// 768px
+$bp-large : 62em; 	// 992px
+
+// What is the class name that the media query mixin should use to target 
+// browsers not supporting media queries?
+
+$no-mq-classname : ".lt-ie9";
+
+// @include breakpoint(UNIT, QUERY PART LEFT, QUERY PART RIGHT, TARGET)
+// NOTE: This MUST be used from within a selector for the parent reference to work
+// Otherwise, an error will be thrown on SASS compile. Love, Aaron.
+
+@mixin breakpoint($unit, $query1: min, $query2: width, $target: "") {
+	// Check if media queries are supported
+	@if $media-queries-supported == true {
+		@if $target != "" {
+			@media #{$target} and (#{$query1}-#{$query2}: #{$unit}) {
+				@content;
+			}
+		}
+		@else {
+			@media (#{$query1}-#{$query2}: #{$unit}) {
+				@content;
+			}
+		}
+	}
+	@else {
+		#{$no-mq-classname} & {
+			@content;
+		}
+	}
+}

@@ -1,0 +1,128 @@
+﻿@mixin btn-shadow(){
+    -moz-transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+	-o-transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+	-webkit-transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+	transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+	box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 13px 0 rgba(0, 0, 0, 0.24);
+    &:active:not(.btn-link) {
+        box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.23), 3px 8px 20px 0 rgba(0, 0, 0, 0.18), -3px 8px 20px 0 rgba(0, 0, 0, 0.18);
+		-moz-transition-delay: 0s;
+		-o-transition-delay: 0s;
+		-webkit-transition-delay: 0s;
+		transition-delay: 0s;
+    }
+}
+
+$button-border-width: 3px;
+
+@each $name, $palette in $palettes {
+  .btn-#{$name} {
+    color: map-get($palette, contrast);
+    background: map-get($palette, base);
+    border:$button-border-width solid map-get($palette, base);
+
+    &:hover {
+      background: map-get($palette, dark);
+    }
+	&.btn-flat {
+		box-shadow: none;
+		background: none;
+        border:$button-border-width solid transparent;
+		color: map-get($palette, base);
+		&:hover{
+			background:map-get($palette, light);
+		}
+	}
+    &.btn-ghost{
+        background: none;
+        border:$button-border-width solid map-get($palette, base);
+        //box-shadow: inset 0 0 20px #0f0, inset 0 0 20px #0f0, inset 0 0 20px #0f0;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        color: map-get($palette, base);
+        &:hover{
+			background:map-get($palette, base);
+            color:map-get($palette, contrast);
+		}
+    }
+  }
+
+}
+
+//=============================================================================
+
+//default btn
+.btn {	
+	display: inline-block;
+	position: relative;	
+	cursor: pointer;
+	border-radius: 4px;
+	text-transform: uppercase;
+	text-decoration: none;
+	overflow: hidden;
+    
+	//sizes
+	&.btn-large{
+		padding: 20px 40px;
+	}
+	&.btn-medium{
+		padding: 10px 20px;
+	}
+	&.btn-small{
+		padding: 5px 10px;
+	}
+}
+
+//raised
+.btn-raised{
+	@include btn-shadow;
+}
+
+
+//circle floating action
+.btn-circle {
+    margin: 0;
+    padding: 15px;
+    font-size: 26px;
+    //width: 56px;
+    //height: 56px;
+    &, &:hover {
+        //.variations(#{""}, background-color, transparent);
+    }
+	& {
+        border-radius: 100%;
+    }
+}
+
+//DISABLED
+.btn.disabled, .btn[disabled], fieldset[disabled] .btn {
+pointer-events: none;
+cursor: not-allowed;
+filter: alpha(opacity=65);
+-webkit-box-shadow: none;
+box-shadow: none;
+opacity: .65;
+}
+
+//==============================================================
+
+//Ripple Efect
+.ripple { /*stylings for the circular overlay*/
+	position: absolute;
+	border-radius: 100%;
+	width: 0;
+	height: 0;
+	background: rgba(0,0,0, .05);
+	-moz-transition: all .3s ease-out;
+	-o-transition: all .3s ease-out;
+	-webkit-transition: all .3s ease-out;
+	transition: all .3s ease-out;
+}
+
+.notransition { /*used to reset the ripple without an animatiion*/
+	-moz-transition: none !important;
+	-o-transition: none !important;
+	-webkit-transition: none !important;
+	transition: none !important;
+}

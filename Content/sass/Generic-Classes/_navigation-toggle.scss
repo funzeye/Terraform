@@ -1,0 +1,152 @@
+// Rock Hammer by Stuff and Nonsense
+// Version: <!-- $version -->
+// URL: http://stuffandnonsense.co.uk/projects/rock-hammer/
+// Version: <!-- $license -->
+// Adapted from: http://codepen.io/bradfrost/pen/sHvaz
+
+$transitionduration: 1s;
+$nav-breakpoint: 850px;//$bp-medium;
+
+#nav-toggle {
+@include breakpoint($nav-breakpoint) {
+display : none; }
+}
+
+nav[role=navigation] {
+clear : both;
+background-color : $navigationbackgroundcolor;
+// @include navigationgrad;
+@include transition (all $transitionduration ease); }
+
+.js nav[role=navigation] {
+overflow : hidden;
+max-height : 0; 
+
+@include breakpoint($nav-breakpoint) {
+max-height : none; }
+}
+
+nav[role=navigation].active {
+max-height : 25em; }
+
+//Is this right, should it not be identical to the responsive-nav.scss #navigation-toggle? The li is giving a syntax error.
+#navigation-toggle {
+    list-style-type : none;
+    @include zero;
+
+    @include breakpoint($nav-breakpoint) {
+        margin : 0 0 0 0;
+        border-width : 0; 
+
+	    li {
+		    display : inline-block;
+	    }
+        li:not(:last-child){
+		    margin : 0 $gutterwidth / 2 0 0;
+	    }
+    }
+	
+    ul {
+        list-style-type : none;
+        @include zero; 
+
+        @include breakpoint($nav-breakpoint) {
+        margin : 0 auto; }
+    }
+
+    a {
+        display : block;
+        padding : .8em;
+        border-bottom : $navigationborderwidth $navigationborderstyle $navigationbordercolor;
+        color : $navigationlinkcolor;
+        text-transform : uppercase;
+
+        @include breakpoint($nav-breakpoint) {
+        border-width : 0;
+        @include font-size(14); 
+        text-transform : none; }
+
+        &:hover {
+        color : $navigationlinkcolorhover;
+        text-decoration : none; }
+    }
+}
+
+//the new menu button
+.navigation-toggle {
+
+    float : right;
+    display : block;
+    //padding : $baselineheight / 2 $gutterwidth / 2; 
+    //border: 1px solid $dividerscolor;
+
+    @include breakpoint($nav-breakpoint) {
+    display : none; }
+
+    padding: .75em 2% .75em 2.5em;
+	position:relative;
+	border: 4px solid palette(indigo, dark);
+	text-transform: uppercase;
+	&:hover, &:active{
+		background-color: palette(orange, dark);
+		color: $white;
+	}
+
+	span{
+		top: 45%;
+		left: 10px;
+	}
+
+	span, span:before, span:after {
+		cursor: pointer;
+		border-radius: 1px;
+		height: 4px;
+		width: 30px;
+		background: palette(orange, dark);
+		position: absolute;
+		display: block;
+		content: '';
+	}
+	&:hover span, &:hover span:before, &:hover span:after{
+		background:white;
+	}
+
+	span:before {
+		top: -7px;
+	}
+
+	span:after {
+		bottom: -7px;
+	}
+
+	span, span:before, span:after {
+		-moz-transition: all 300ms ease-in-out;
+		-o-transition: all 300ms ease-in-out;
+		-webkit-transition: all 300ms ease-in-out;
+		transition: all 300ms ease-in-out;
+	}
+
+	&.active span {
+		background-color: transparent;
+	}
+
+	&.active span:before, &.active span:after {
+		top: 0;
+	}
+
+	&.active span:before {
+		-moz-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		-o-transform: rotate(45deg);
+		-webkit-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+
+	&.active span:after {
+		-moz-transform: rotate(-45deg);
+		-ms-transform: rotate(-45deg);
+		-o-transform: rotate(-45deg);
+		-webkit-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+	}
+}

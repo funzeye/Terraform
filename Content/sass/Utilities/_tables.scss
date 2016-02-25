@@ -1,0 +1,27 @@
+
+// TABLES =============================================================================
+
+// =tables ============
+
+$tablepadding 					: 8px;
+
+// Set table background colour
+$tablebackgroundcolor			: transparent;
+
+// Set optional alternate table row background colour
+$tablebackgroundstripe 			: $disabledhintcolor;
+
+// Set table row :hover colour
+$tablebackgroundhover 			: $disabledhintcolor;
+
+// Set table border widths. Default is $borderwidth defined above
+$tableborderwidth				: $borderwidth;
+
+// Set tables’ border styles
+$tableborderstyle				: $borderstyle;
+
+// Set tables’ border colour
+$tablebordercolor 				: $secondarytextcolor;
+
+// Set tables’ font-family. Default is $altfontfamily defined above
+$tablefontfamily 				: $altfontfamily;

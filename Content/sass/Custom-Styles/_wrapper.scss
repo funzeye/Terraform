@@ -1,0 +1,8 @@
+﻿.wrapper{
+	margin: 0 auto;
+	width:90%;
+    max-width: $maxwidthpx;
+    max-width: $maxwidth;
+	padding: $baselineheight 5%;
+	@include clearfix;
+}

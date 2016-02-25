@@ -1,0 +1,33 @@
+﻿ul, ol {
+  margin-bottom: $baselineheight / 2;
+  padding-left: $baselineheight;
+  //list-style-type: none;
+
+  &%plain-ul, &%plain-ol {
+    //list-style-type: disc;
+    //margin-bottom: $baselineheight / 2;
+    //padding-left: $baselineheight;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  /*&%default-ol {
+    list-style-type: decimal;
+    margin-bottom: $baselineheight / 2;
+    padding-left: $baselineheight;
+  }*/
+}
+
+dl {
+  margin-bottom: $baselineheight / 2;
+
+  dt {
+    font-weight: bold;
+    margin-top: $baselineheight / 2;
+  }
+
+  dd {
+    margin: 0;
+  }
+}

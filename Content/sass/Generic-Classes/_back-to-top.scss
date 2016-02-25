@@ -1,0 +1,41 @@
+﻿#back-top {
+	display:block;
+	bottom: 30px;
+	margin-bottom: 0;
+	margin-right: 3px;
+	position: fixed;
+	right: 0;
+	z-index: 100;
+	@include breakpoint($bp-large){
+		margin-right: 50px;
+	}
+}
+
+#back-top a {
+background-color: palette(orange, light);
+background-repeat: no-repeat;
+background-position: center center;
+display: block;
+height: 60px;
+width: 60px;
+line-height: 60px;
+@include breakpoint($bp-large){
+	height: 40px;
+	width: 40px;
+	line-height: 40px;
+}
+outline: medium none;
+
+text-align: center;
+
+color: #fff;
+text-decoration: none;
+	&:hover{
+		background-color:palette(indigo);
+	}
+}
+
+#back-top a i {
+font-size: 24px;
+line-height: 40px;
+}

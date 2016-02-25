@@ -1,0 +1,62 @@
+﻿//two options use a two tier system where the color names are abstracted - or use one tier and keep color names
+//Think we will go with 1 tier for now - easy to change color with find+replace - at least with this method we will know exactly what color we are using.
+
+//color: scale-color($button-bg, $lightness: –10%); http://zurb.com/university/lessons/52
+//tint - shade - mix is better than lightne and darken! http://revoltpuppy.com/articles/39
+
+// accent color should stand out - used for call to action for example http://www.instantshift.com/2014/08/26/accent-colors-in-web-design/
+// use google material design palettes for color inspiration - http://www.google.com/design/spec/style/color.html#color-color-palette
+// primary palette = base (500) light and dark
+// accent palette  = base light dark
+
+//=====================================================================
+
+//black and white: 
+// best value is 87% black against a white background
+// default text
+$black               : #000000;
+$white               : #ffffff;
+$textcolor 		     : mix(black,white,87%);
+$secondarytextcolor  : mix(black,white,54%);
+$disabledhintcolor   : mix(black,white,26%);
+$dividerscolor       : mix(black,white,12%);
+
+$bodycolor           : $white;
+
+//=====================================================================
+
+//Default Theme
+//choose 1 primary and one accent colour
+//we could use scale-color() or tint/shade to get lighter and darker hues...
+
+//Use SASS Maps + function to organise Palette Theme:
+$palettes: (
+	indigo: (
+        base    :  #3f51b5,
+        light   :  #C5CAE9,
+        dark    :  #303F9F,
+		contrast:  $white
+    ),
+    orange: (
+        base    : #FF6E40,
+        light   : #ff9e80,
+        dark    : #ff3d00,
+		contrast: $white
+    )
+);
+
+// Palette function,
+@function palette($palette, $tone: 'base') {
+    @return map-get(map-get($palettes, $palette), $tone);
+}
+//example of it in use:
+/*a {
+    color: palette(purple);
+    &:hover {
+        color: palette(purple, light);
+    }
+}*/
+
+//creating color rules for buttons etc:
+//http://maketea.co.uk/2014/07/21/managing-relationships-between-colours-with-sass.html
+

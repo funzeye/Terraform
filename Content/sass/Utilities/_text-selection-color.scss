@@ -1,0 +1,10 @@
+//https://developer.mozilla.org/en-US/docs/Web/CSS/::selection
+::-moz-selection {
+background-color : lighten(palette(indigo), 65%);
+color : palette(indigo);
+text-shadow : none; }
+
+::selection {
+background-color : lighten(palette(indigo), 65%);
+color : palette(indigo);
+text-shadow : none; }

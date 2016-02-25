@@ -1,0 +1,39 @@
+﻿//we dont want the height to be set - this happens when adding media in wordpress 
+img[class*="align"],
+img[class*="wp-image-"] {
+    height: auto;
+    
+}
+.alignright
+{
+    float:right;
+    margin-left: 1em;
+    @include breakpoint(450px, max){
+        float:none;
+        display:block;
+        margin: 0 auto 1.5em;
+    }
+}
+
+.alignleft
+{
+float:left;
+margin-right: 1em;
+@include breakpoint(450px, max){
+        float:none;
+        display:block;
+        margin: 0 auto 1.5em;
+    }
+}
+.aligncenter {
+    margin-bottom: 1em;
+    display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption-text {
+    @include font-size(12);
+    text-align: center;
+    color: $secondarytextcolor;
+}

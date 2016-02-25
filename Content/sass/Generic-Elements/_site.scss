@@ -1,0 +1,56 @@
+// Rock Hammer by Stuff and Nonsense
+// Version: <!-- $version -->
+// URL: http://stuffandnonsense.co.uk/projects/rock-hammer/
+// Version: <!-- $license -->
+
+@-webkit-viewport { 
+width : device-width; }
+
+@-moz-viewport { 
+width : device-width; }
+
+@-ms-viewport { 
+width : device-width; }
+
+@-o-viewport { 
+width : device-width; }
+
+// This can cause issues with Chrome Dev Tools on both stable and Canary (tested on v29 and v31).
+// For more, see https://code.google.com/p/chromium/issues/detail?id=232102
+// Therefore, you may wish to comment out this declaration for now.
+@viewport { 
+width : device-width; }
+
+html {
+	background: $bodycolor;
+	-webkit-overflow-scrolling: touch;
+	-webkit-tap-highlight-color: $disabledhintcolor;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+}
+
+body {
+	@include zero;
+	width : 100%;
+	background-color : transparent;
+	color : $textcolor; 
+}
+
+body:after {
+	content : '320';
+	display : none; 
+
+	@include breakpoint($bp-small) {
+	content : 'bp-small'; }
+
+	@include breakpoint($bp-medium) {
+	content : 'bp-medium'; }
+
+	@include breakpoint($bp-large) {
+	content : 'bp-large'; }
+}
+
+.m-hide {
+@include hidden; }

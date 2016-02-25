@@ -1,0 +1,28 @@
+// =hero ============
+
+// Hero have a default flat background colour
+// Add an optional gradient in _bootstrap-hero.scss
+// Configure the gradient colours in _texture.scss
+$herobackgroundcolor            : rgba(palette(indigo), .1);
+
+// Set hero’s border width
+$heroborderwidth 				: $borderwidth;
+
+// And hero’s border style
+$heroborderstyle 				: $borderstyle;
+
+// By default hero’s border is a tint of $herobackgroundcolor. Adjust percentage as required
+$herobordercolor				: darken($herobackgroundcolor, 20%);
+
+// Set hero’s border radius. Default is $borderradius defined above
+$heroborderradius				: $borderradius;
+
+// By default colour is a tint of background colour. Adjust percentage as required
+$herocolor						: $textcolor;
+
+// Add optional box-shadow values or ignore
+// By default shadow colour is a tint of background colour. Adjust percentage as required
+$heroshadow						: darken($herobackgroundcolor, 10%);
+$heroshadowblur					: 10px;
+
+
