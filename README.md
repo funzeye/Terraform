@@ -10,7 +10,7 @@ Principles of the new design:
 2. Design for the latest browsers - ensures you take advantage of their creative capabilites (h/t Rachel Andrew)
 3. Have solid fallbacks in place for old browsers
 4. Make it as lightweight and performance focused
-5. Utilise OO/Atomic Design patterns - e.g. pattern lab, itcss
+5. Utilise OO type folder structure - e.g. 7-1, itcss
 6. Focus on simple and intuitive sass naming - simplified version of BEM perhaps
 7. Add Animation as a core component
 8. Accessibility at the heart
