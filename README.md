@@ -16,9 +16,10 @@ Currently in the process of a complete redesign
 
 for the above structure I took inspiration from both ITCSS and 7-1 folder structures mainly - but changed the parts I didnt feel comfortable with. I will probably add another folder for animations as my animations library grows.
 
+Package Manager Used: Yarn
 
 Principles of the new design:
-1. No uneccsary abstractions. i.e. Minimise pre-defined grid components - the new css grid element mostly does away with the need for any framework to structure and implement grids. Only use it where you wish to enfore grid rules with sass helpers for example.
+1. No uneccesary abstractions. i.e. Minimise pre-defined grid components - the new css grid element mostly does away with the need for any framework to structure and implement grids. Only use it where you wish to enfore grid rules with sass helpers for example.
 2. Design for the latest browsers - ensures you take advantage of their creative capabilites (h/t Rachel Andrew)
 3. Have solid fallbacks in place for old browsers
 4. Make it as lightweight and performance focused

@@ -1,17 +1,23 @@
-﻿$(document).ready(function () {
-    jQuery('a[href*="#"]:not([href="#"])').click(function () {
-        if (this.hash != "#navigation-toggle") {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-                var target = jQuery(this.hash);
-                target = target.length ? target : jQuery('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    jQuery('html,body').animate({
-                        scrollTop: target.offset().top
-                    }, 1000);
+﻿/* source & demo: https://css-tricks.com/smooth-scrolling-accessibility/ */
+
+$(function () {
+    $('a[href*="#"]:not([href="#"])').click(function () {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                $('html, body').animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+                target.focus(); // Setting focus
+                if (target.is(":focus")) { // Checking if the target was focused
                     return false;
-                }
+                } else {
+                    target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                    target.focus(); // Setting focus
+                };
+                return false;
             }
-        } //added this outside IF to prevent scroll when menu appears on mobile screen size
-        return false;
+        }
     });
 });

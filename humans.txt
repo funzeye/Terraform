@@ -11,10 +11,11 @@ Standards:
 
 HTML5
 CSS3
+SASS
+JAVASCRIPT
 
 Components: 
 
-jQuery: 				http://jquery.com
 Respond:				https://github.com/scottjehl/Respond
 Bourbon:			    http://bourbon.io/
 Font-Awesome:			https://fortawesome.github.io/Font-Awesome/

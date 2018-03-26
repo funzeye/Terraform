@@ -1,2 +1,0 @@
-﻿Vendor js files are in Scripts Folder - e.g. JQuery
-This folder is for your own custom JS.

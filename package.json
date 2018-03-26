@@ -1,0 +1,15 @@
+{
+  "name": "Terraform",
+  "version": "0.0.1",
+  "description": "A Website Project Skeleton Framework",
+  "main": "index.js",
+  "repository": "https://github.com/funzeye/Terraform.git",
+  "author": "David Kivlehan <funzeye@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.4",
+    "bourbon": "^5.0.0",
+    "jquery": "^3.3.1",
+    "respond.js": "^1.4.2"
+  }
+}
