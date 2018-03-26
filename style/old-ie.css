@@ -1,4 +1,10 @@
 ﻿@charset "UTF-8";
+/*a {
+    color: palette(purple);
+    &:hover {
+        color: palette(purple, light);
+    }
+}*/
 body:before {
   background-color: #FCF8E3;
   border-bottom: 1px solid #FBEED5;
@@ -339,6 +345,12 @@ template {
 
 /* Set up a decent box model on the root element */
 html {
+  font-size: 18px;
+  font-size: 1.8rem;
+  /* [1] */
+  padding-bottom: 0;
+  background-color: #fff;
+  color: #212121;
   box-sizing: border-box;
   -webkit-overflow-scrolling: touch;
   -webkit-text-size-adjust: 100%;
@@ -438,12 +450,6 @@ img[class*="wp-image-"] {
   font-size: 1.2rem;
   text-align: center; }
 
-/*a {
-    color: palette(purple);
-    &:hover {
-        color: palette(purple, light);
-    }
-}*/
 /*@import "sass/Utilities/media-query";
 @import "sass/Utilities/mixins";
 @import "sass/Utilities/reset";

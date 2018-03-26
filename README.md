@@ -10,9 +10,12 @@ Currently in the process of a complete redesign
 2. Components - Small re-usable one html level deep components e.g. buttons
 3. Areas - lot of people call this type of folder "modules" or "layout" - I prefer 'area' as its more natural language in line with what I actually use when describing things in this folder e.g. the "header area" - other areas include sidebar, footer, nav etc
 4. Elements - basic styling for all html elements e.g. h1, a, li
-5. Settings (may rename this, maybe theme?) - files containing basic style settings for current site that you will probably wish to alter e.g. colour.scss
-6. Base - the boilerplate code for the project - e.g. elements to fix issues with default html browser rendering - normalize.scss -- also rules you expect to follow across sites e.g. a typographic system - should not be much need to alter the scss in these files
-7. Utilities - e.g. mixins, functions, variables - most files in this folder should not need to be altered from site to site (except for the media_query file) - this folder should not produce any css
+5. Base - the boilerplate code for the project - e.g. elements to fix issues with default html browser rendering - normalize.scss -- also rules you expect to follow across sites e.g. setting base font size on html element - should not need to alter much of the scss in these files
+6. Utilities - e.g. mixins, functions, variables - most files in this folder should not need to be altered from site to site (except for the media_query file) - this folder should not produce any css
+7. Settings - files containing basic style settings for current site that you will probably wish to alter e.g. colour.scss - should not produce any css
+
+layers 6 & 7 should not produce any css
+layer 5 is first folder that produces some css 
 
 We won't have a sass vendors folder as these files will be loaded in using Yarn at project start time.
 

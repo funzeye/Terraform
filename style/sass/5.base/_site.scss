@@ -21,6 +21,12 @@ width : device-width; }
 
 /* Set up a decent box model on the root element */
 html {
+    @include font-size($basefontsize); /* [1] */
+    //padding: $base-spacing-unit;
+    padding-bottom: 0;
+    background-color: #fff;
+    color: $textcolor;
+
     box-sizing: border-box;
     -webkit-overflow-scrolling: touch;
     -webkit-text-size-adjust: 100%;

@@ -1,28 +1,27 @@
 
+// Add the Settings
+@import "sass/7.settings/_colour";
+@import "sass/7.settings/_typography";
+
 // Add the Utilities ==================================
-@import "sass/7.utilities/_typography";
-@import "sass/7.utilities/_media-query.scss";
+
+@import "sass/6.utilities/_media-query.scss";
 @import "../vendor/sass-mq/_mq.scss";
 @import "../vendor/bourbon/core/bourbon";
-@import "sass/7.utilities/_basics";
-@import "sass/7.utilities/_borders";
-@import "sass/7.utilities/_color-variables";
-@import "sass/7.utilities/_font-size-mixin";
-@import "sass/7.utilities/_forms";
-@import "sass/7.utilities/_hero";
-@import "sass/7.utilities/_navigation";
-@import "sass/7.utilities/_tables";
-@import "sass/7.utilities/_z-index";
+@import "sass/6.utilities/_basics";
+@import "sass/6.utilities/_borders";
+@import "sass/6.utilities/_font-size-mixin";
+@import "sass/6.utilities/_forms";
+@import "sass/6.utilities/_hero";
+@import "sass/6.utilities/_navigation";
+@import "sass/6.utilities/_tables";
+@import "sass/6.utilities/_z-index";
 
 // Add the Base
 @import "../vendor/normalize.css/normalize";
-@import "sass/6.base/_site";
-@import "sass/6.base/_print";
-@import "sass/6.base/_wordpress-alignment-fix"; //use on wordpress sites
-
-
-// Add the Settings
-@import "sass/5.settings/_colour";
+@import "sass/5.base/_site";
+@import "sass/5.base/_print";
+@import "sass/5.base/_wordpress-alignment-fix"; //use on wordpress sites
 
 
 /*@import "sass/Utilities/media-query";
