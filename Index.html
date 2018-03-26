@@ -1,32 +1,34 @@
 ﻿<!DOCTYPE html>
-<html>
+<html class="no-js" lang="">
 <head>
-    <title></title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="cleartype" content="on">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
     <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="author" content="Hover Craftie">
-    <meta name="HandheldFriendly" content="True">
-    <link href="vendor/@fortawesome/fontawesome/styles.min.css" rel="stylesheet" /><!--Recommend switching to min version on deployment-->
-    <link href="style/terraform.min.css" rel="stylesheet"><!--Recommend switching to min version on deployment-->
-    
-    <!-- head javascript - PLACE SCRIPTS HERE THAT NEED TO BE RUN IN HEAD - RECOMMEND MINIFY + BUNDLING -->
-    <script src="vendor/jquery/dist/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link href="vendor/@fortawesome/fontawesome/styles.min.css" rel="stylesheet" /><!--Recommend switching to min version on deployment-->
+    <!--[if (gt IE 8) | (IEMobile)]><!-->
+    <link href="style/terraform.min.css" rel="stylesheet"><!--Recommend switching to min version on deployment-->
+    <!--<![endif]-->
+    <!--[if (lt IE 9) & (!IEMobile)]>
+    <link href="style/old-ie.min.css" rel="stylesheet">
+    <![endif]-->
+    <!-- head javascript - start - PLACE SCRIPTS HERE THAT NEED TO BE RUN IN HEAD - RECOMMEND MINIFY + BUNDLING -->
+    <script src="vendor/jquery/dist/jquery.min.js"></script>
+    <!-- head javascript - end -->
     <!--my most used fonts - comment out unused-->
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,700,400italic,700italic' rel='stylesheet' type='text/css'><!-- serif -->
     <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,400italic,700italic' rel='stylesheet' type='text/css'><!--san serif-->
-
-    <meta content="yes" name="mobile-web-app-capable" />
-    <meta content="yes" name="apple-mobile-web-app-capable" />
-    <!--<link href="app-icon.png" rel="icon" />
-    <link href="app-icon.png" rel="apple-touch-icon" />
-    <link href="/startup.png" rel="apple-touch-startup-image" />-->
 </head>
 <body>
+    <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->
     <header id="header">
         <a href="#navigation-toggle" class="navigation-toggle"><span></span><i>Menu</i></a>
         <nav id="navigation-toggle" role="navigation">
@@ -37,7 +39,7 @@
                 <li><a href="#">Services</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
-        </nav>  
+        </nav>
     </header>
     <main role="main">
         <!-- Main Body Area -->
@@ -150,7 +152,7 @@
                 </form>
 
             </div>
-        </section>      
+        </section>
     </main>
     <footer role="contentinfo">
         <div class="wrapper">
@@ -167,7 +169,6 @@
     <script src="js/nav-toggle.js"></script>
     <script src="js/smooth-scroll.js"></script>
     <!-- END body javascript -->
-    
     <!-- inline js (e.g. Google Analytics code) here -->
     <!--<script>
     </script>-->

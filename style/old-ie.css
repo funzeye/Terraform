@@ -10,22 +10,11 @@ body:before {
   position: fixed;
   right: 0;
   top: 0;
-  z-index: 100; }
-  @media (min-width: 20em) {
-    body:before {
-      content: "mobile ≥ 320px (20em)"; } }
-  @media (min-width: 30em) {
-    body:before {
-      content: "mobileLandscape ≥ 480px (30em)"; } }
-  @media (min-width: 46.25em) {
-    body:before {
-      content: "tablet ≥ 740px (46.25em)"; } }
-  @media (min-width: 61.25em) {
-    body:before {
-      content: "desktop ≥ 980px (61.25em)"; } }
-  @media (min-width: 81.25em) {
-    body:before {
-      content: "wide ≥ 1300px (81.25em)"; } }
+  z-index: 100;
+  content: "mobile ≥ 320px (20em)";
+  content: "mobileLandscape ≥ 480px (30em)";
+  content: "tablet ≥ 740px (46.25em)";
+  content: "desktop ≥ 980px (61.25em)"; }
 
 /* using sass map */
 /* usage example */
@@ -433,20 +422,10 @@ img[class*="wp-image-"] {
 .alignright {
   float: right;
   margin-left: 1em; }
-  @media (max-width: 29.99em) {
-    .alignright {
-      float: none;
-      display: block;
-      margin: 0 auto 1.5em; } }
 
 .alignleft {
   float: left;
   margin-right: 1em; }
-  @media (max-width: 29.99em) {
-    .alignleft {
-      float: none;
-      display: block;
-      margin: 0 auto 1.5em; } }
 
 .aligncenter {
   margin-bottom: 1em;

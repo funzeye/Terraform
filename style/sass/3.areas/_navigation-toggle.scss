@@ -7,16 +7,21 @@
 $transitionduration: 1s;
 $nav-breakpoint: 850px;//$bp-medium;
 
+// Set navigation items’ link colours
+$navigationlinkcolor: $white;
+
+
 #nav-toggle {
 @include breakpoint($nav-breakpoint) {
 display : none; }
 }
 
 nav[role=navigation] {
-clear : both;
-background-color : $navigationbackgroundcolor;
-// @include navigationgrad;
-@include transition (all $transitionduration ease); }
+    clear: both;
+    background-color: $navigationbackgroundcolor;
+    // @include navigationgrad;
+    transition: all $transitionduration ease;
+}
 
 .js nav[role=navigation] {
 overflow : hidden;

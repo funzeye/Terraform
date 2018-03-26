@@ -2,7 +2,7 @@
 // (IE <= 8, Firefox <= 3, Opera <= 9) set $mq-responsive to false
 // Create a separate stylesheet served exclusively to these browsers,
 // meaning @media queries will be rasterized, relying on the cascade itself
-$mq-responsive: true;
+$mq-responsive: false;
  
 // Opacity support in IE required via the proprietry ActiveX?
 $ie8-opacity-supported 	 : false;

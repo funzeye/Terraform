@@ -12,7 +12,7 @@
 // By default site navigation has a flat background colour
 // Add an optional gradient in __navigation-toggle.scss
 // Configure the gradient colours in _texture.scss
-$navigationbackgroundcolor 		: $textcolor;
+$navigationbackgroundcolor 		: $black;
 
 // Set navigation items’ bottom border width
 $navigationborderwidth			: $borderwidth;
@@ -23,14 +23,8 @@ $navigationborderstyle			: $borderstyle;
 // Set navigation items’ bottom border colour
 $navigationbordercolor 			: darken($navigationbackgroundcolor,10%);
 
-// Set navigation items’ link colours
-$navigationlinkcolor			: $white;
-
 // :hover
-$navigationlinkcolorhover		: darken($navigationlinkcolor,10%);
-
-
-
+//$navigationlinkcolorhover		: darken($navigationlinkcolor,10%);
 
 
 // =navbar ============
@@ -41,7 +35,7 @@ $navbarheight					: 44px;
 // By default Navbars have a flat background colour
 // Add an optional gradient in _bootstrap-navbar.scss
 // Configure the gradient colours in _texture.scss
-$navbarbackgroundcolor			: $dividerscolor;
+//$navbarbackgroundcolor			: $dividerscolor;
 
 // Set navbar’s border width
 $navbarborderwidth				: $borderwidth * 2;
@@ -50,28 +44,28 @@ $navbarborderwidth				: $borderwidth * 2;
 $navbarborderstyle				: $borderstyle;
 
 // By default navbar’s border is a tint of $navbarbackgroundcolor. Adjust percentage as required
-$navbarbordercolor 				: darken($navbarbackgroundcolor,10%);
+//$navbarbordercolor 				: darken($navbarbackgroundcolor,10%);
 
 // Set navbar’s border radius. Default is $borderradius defined above
 $navbarborderradius				: $borderradius;
 
 // Set navbar’s text colour
-$navbarcolor					: $textcolor;
+$navbarcolor                    : $black;
 
 // Set navbar’s brand colour
 $navbarbrandcolor				: palette(indigo);
 
 // Set navbar’s link colours
-$navbarlinkcolor				: $textcolor;
+$navbarlinkcolor                : $grey;
 
 // :hover
 $navbarlinkbackgroundcolorhover : rgba($navbarlinkcolor,.25);
-$navbarlinkcolorhover			: $textcolor;
+$navbarlinkcolorhover           : $grey;
 
 // :hover
 $navbarlinkbackgroundcoloractive: palette(indigo);
 $navbarlinkcoloractive			: $white;
 
 // Set navbar’s divider colour
-$navbardividerleft				: $navbarbordercolor;
-$navbardividerright				: lighten($navbarbordercolor,10%);
+//$navbardividerleft				: $navbarbordercolor;
+//$navbardividerright				: lighten($navbarbordercolor,10%);

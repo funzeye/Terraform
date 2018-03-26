@@ -1,8 +1,31 @@
-// Import bourbon.io ==================================
-@import "../vendor/bourbon/core/bourbon";
 
 // Add the Utilities ==================================
-@import "sass/Utilities/media-query";
+@import "sass/7.utilities/_typography";
+@import "sass/7.utilities/_media-query.scss";
+@import "../vendor/sass-mq/_mq.scss";
+@import "../vendor/bourbon/core/bourbon";
+@import "sass/7.utilities/_basics";
+@import "sass/7.utilities/_borders";
+@import "sass/7.utilities/_color-variables";
+@import "sass/7.utilities/_font-size-mixin";
+@import "sass/7.utilities/_forms";
+@import "sass/7.utilities/_hero";
+@import "sass/7.utilities/_navigation";
+@import "sass/7.utilities/_tables";
+@import "sass/7.utilities/_z-index";
+
+// Add the Base
+@import "../vendor/normalize.css/normalize";
+@import "sass/6.base/_site";
+@import "sass/6.base/_print";
+@import "sass/6.base/_wordpress-alignment-fix"; //use on wordpress sites
+
+
+// Add the Settings
+@import "sass/5.settings/_colour";
+
+
+/*@import "sass/Utilities/media-query";
 @import "sass/Utilities/mixins";
 @import "sass/Utilities/reset";
 //@import "sass/Utilities/normalise";
@@ -20,7 +43,7 @@
 @import "sass/Utilities/tables";
 @import "sass/Utilities/text-selection-color";
 @import "sass/Utilities/forms";
-//@import "sass/Utilities/sass/Utilities/wordpress-alignment-fix"; //use on wordpress sites
+//@import "sass/Utilities/sass/Utilities/wordpress-alignment-fix";
 
 //Add the Generic Elements =============================
 @import "sass/Generic-Elements/forms";
@@ -46,7 +69,7 @@
 @import "sass/Generic-Classes/interblock";
 
 //Add all other custom styles
-@import "sass/Custom-Styles/wrapper";
+@import "sass/Custom-Styles/wrapper";*/
 
 
 

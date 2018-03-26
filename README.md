@@ -11,8 +11,10 @@ Currently in the process of a complete redesign
 3. Areas - lot of people call this type of folder "modules" or "layout" - I prefer 'area' as its more natural language in line with what I actually use when describing things in this folder e.g. the "header area" - other areas include sidebar, footer, nav etc
 4. Elements - basic styling for all html elements e.g. h1, a, li
 5. Settings (may rename this, maybe theme?) - files containing basic style settings for current site that you will probably wish to alter e.g. colour.scss
-6. Generic (could also be called base or reset) - elements to fix issues with default html browser rendering - e.g. normalize.scss - should be no need to alter any of these files
-7. Utilities - e.g. mixins functions - files in this folder should not need to be altered from site to site - this folder should alo not produce any css
+6. Base - the boilerplate code for the project - e.g. elements to fix issues with default html browser rendering - normalize.scss -- also rules you expect to follow across sites e.g. a typographic system - should not be much need to alter the scss in these files
+7. Utilities - e.g. mixins, functions, variables - most files in this folder should not need to be altered from site to site (except for the media_query file) - this folder should not produce any css
+
+We won't have a sass vendors folder as these files will be loaded in using Yarn at project start time.
 
 for the above structure I took inspiration from both ITCSS and 7-1 folder structures mainly - but changed the parts I didnt feel comfortable with. I will probably add another folder for animations as my animations library grows.
 

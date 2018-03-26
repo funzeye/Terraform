@@ -1,12 +1,5 @@
 // FORMS =============================================================================
 
-// Set form’s font-family. Default is $basefontfamily defined above
-$formfontfamily 				: $basefontfamily;
-
-
-
-
-
 // =inputs ============
 
 $forminputpadding				: 6px 11px;
@@ -23,9 +16,9 @@ $forminputborderwidth			: $borderwidth * 2;
 $forminputborderstyle			: $borderstyle;
 
 //Set inputs’ border style. Default is $bordercolor defined above
-$forminputbordercolor 			: $bordercolor;
-$forminputbordercolorhover 		: darken($forminputbordercolor, 10%);
-$forminputbordercolorfocus 		: darken($forminputbordercolor, 25%);
+$forminputbordercolor 			: $black;
+//$forminputbordercolorhover 		: darken($forminputbordercolor, 10%);
+//$forminputbordercolorfocus 		: darken($forminputbordercolor, 25%);
 
 // Set inputs’ border radius. Default is $borderradius defined above
 $forminputborderradius			: $borderradius;
@@ -34,7 +27,7 @@ $forminputborderradius			: $borderradius;
 $forminputfontfamily			: $altfontfamily;
 
 // Set placeholder text colour
-$formplaceholdercolor 			: $secondarytextcolor;
+$formplaceholdercolor           : $grey;
 
 
 
@@ -43,10 +36,10 @@ $formplaceholdercolor 			: $secondarytextcolor;
 // =help ============
 
 // Set the colour for help text
-$formhelpcolor 					: lighten($textcolor, 10%);
+$formhelpcolor                  : lighten($black, 10%);
 
 // And small text inside forms
-$formsmallcolor 				: lighten($textcolor, 10%);
+$formsmallcolor                 : lighten($black, 10%);
 
 
 
@@ -57,9 +50,7 @@ $formsmallcolor 				: lighten($textcolor, 10%);
 $buttonpadding 					: 6px 11px;
 
 // Buttons have a default flat background colour
-// Add an optional gradient in _bootstrap-form-buttons.scss
-// Configure the gradient colours in _texture.scss
-$buttonbackgroundcolor 			: $disabledhintcolor;
+$buttonbackgroundcolor          : $grey-light;
 
 // Set the default button’s border width. Default is $borderwidth defined above
 $buttonborderwidth				: $borderwidth;
@@ -68,26 +59,26 @@ $buttonborderwidth				: $borderwidth;
 $buttonborderstyle				: $borderstyle;
 
 // By default border colour is a tint of background colour. Adjust percentage as required
-$buttonbordercolor 				: darken($buttonbackgroundcolor,10%);
+//$buttonbordercolor 				: darken($buttonbackgroundcolor,10%);
 
 // Sometimes you may want a darker bottom border to suggest three-dimensions
-$buttonbottombordercolor 		: darken($buttonbordercolor, 5%);
+//$buttonbottombordercolor 		: darken($buttonbordercolor, 5%);
 
 // Set the default button’s border radius. Default is $borderradius defined above
 $buttonborderradius				: $borderradius;
 
 // Set the button’s font-family. Default is $basefontfamily defined above
-$buttonfontfamily 				: $basefontfamily;
+//$buttonfontfamily 				: $basefontfamily;
 
 // Set the button’s font-size. 
 // Use only a number. Units (em/px/%) are not required
 // Default is $basefontsize defined above
-$buttonfontsize 				: $basefontsize;
+//$buttonfontsize 				: $basefontsize;
 
 // Set the default button’s text colour
 // Colours for :hover and :active  are derived automatically from $buttoncolor
 // Override colours for :hover and :active in _bootstrap-form-buttons.scss
-$buttoncolor 					: $secondarytextcolor;
+//$buttoncolor 					: $secondarytextcolor;
 
 
 
@@ -97,5 +88,5 @@ $buttoncolor 					: $secondarytextcolor;
 
 
 // Set the primary action button’s border and text colours
-$buttonbordercolorprimary		: darken(palette(indigo), 10%);
+//$buttonbordercolorprimary		: darken(palette(indigo), 10%);
 $buttoncolorprimary				: $white;

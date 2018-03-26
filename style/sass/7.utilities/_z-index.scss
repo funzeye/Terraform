@@ -1,0 +1,18 @@
+﻿/* using sass map */
+$zindex: ( 
+    modal : 9000, 
+    overlay : 8000, 
+    dropdown : 7000, 
+    header : 6000, 
+    footer : 5000 
+);
+
+/* usage example */
+//.header {
+//    z-index: map-get($zindex, header);
+//}
+
+/* alternate approach - plain variables*/
+//$zindexModal: 9000;
+//$zindexOverlay: 8000;
+//$zindexHeader: 7000;

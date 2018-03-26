@@ -4,6 +4,9 @@
 // Version: <!-- $license -->
 // Adapted from: https://github.com/twitter/bootstrap/blob/master/less/forms.less
 
+// Set form’s font-family. Default is $basefontfamily defined above
+$formfontfamily: $basefontfamily;
+
 form {
     margin : 0 0 $baselineheight 0;
     font-family : $formfontfamily;

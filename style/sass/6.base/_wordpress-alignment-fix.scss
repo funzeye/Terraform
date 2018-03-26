@@ -1,0 +1,38 @@
+﻿//we dont want the height to be set on images in wordpress posts - this happens by default when adding media in wordpress 
+img[class*="align"],
+img[class*="wp-image-"] {
+    height: auto;
+    
+}
+.alignright {
+    float: right;
+    margin-left: 1em;
+
+    @include mq($until: mobileLandscape) {
+        float: none;
+        display: block;
+        margin: 0 auto 1.5em;
+    }
+}
+
+.alignleft {
+    float: left;
+    margin-right: 1em;
+
+    @include mq($until: mobileLandscape) {
+        float: none;
+        display: block;
+        margin: 0 auto 1.5em;
+    }
+}
+.aligncenter {
+    margin-bottom: 1em;
+    display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption-text {
+    @include font-size(12);
+    text-align: center;
+}

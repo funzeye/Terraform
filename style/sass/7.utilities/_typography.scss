@@ -1,12 +1,11 @@
 // STEP TWO: TYPOGRAPHY ================================================
 
-//All these values can be overridden on a per project basis in 'custom-styles' typography file
 // Now define your design’s typography by setting a base typeface and size
 
 $baselineheight 				: 1.8em;
 
-//$basefontfamily 				: Palatino, "Times New Roman", Times, serif; //set in custom styles
-//$basefontsize 				: 16;//set in custom styles
+//$basefontfamily 				: Palatino, "Times New Roman", Times, serif;
+//$basefontsize 				    : 16;//set in custom styles
 
 $letter-spacing                 : 0.01rem;
 
@@ -28,11 +27,6 @@ $ampfontfamily 					: local('Georgia'), local('Garamond'), local('Palatino'), lo
 
 //  And if your site’s for geeks, you’ll need a font for code too
 $codefont 						: Monaco, Courier New, monospace;
-
-// TYPOGRAPHY =============================================================================
-
-// Background colour for blockquotes, ins, and mark
-$basefontbackgroundcolor		: $dividerscolor; 
 
 
 
