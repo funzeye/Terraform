@@ -236,7 +236,6 @@ padding : ($baselineheight - 1) $gutterwidth $baselineheight;
 .help-block {
     display: block;
     margin-bottom: $verticalrythm / 1.5;
-    color: $secondarytextcolor;
     @include font-size($basefontsize * 0.75);
     margin-top: -1em;
 }

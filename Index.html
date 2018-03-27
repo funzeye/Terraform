@@ -11,7 +11,8 @@
     <link rel="apple-touch-icon" href="icon.png">
     <!-- Place favicon.ico in the root directory -->
 
-    <link href="vendor/@fortawesome/fontawesome/styles.min.css" rel="stylesheet" /><!--Recommend switching to min version on deployment-->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+    <link href="vendor/@fortawesome/fontawesome/styles.css" rel="stylesheet" /><!--Recommend switching to min version on deployment-->
     <!--[if (gt IE 8) | (IEMobile)]><!-->
     <link href="style/terraform.min.css" rel="stylesheet"><!--Recommend switching to min version on deployment-->
     <!--<![endif]-->
@@ -85,19 +86,32 @@
 
                 <h2>Buttons</h2>
                 <p>Buttons and button sizes.</p>
-                <a href="#" class="btn btn-large btn-orange">default</a>
-                <a href="#" class="btn btn-large btn-raised btn-indigo">Raised</a>
-                <a href="#" class="btn btn-large btn-ghost btn-indigo">Ghost</a>
+                <a class="btn btn-large btn-primary">default</a>
+                <a class="btn btn-large btn-raised btn-primary">Raised</a>
+                <a class="btn btn-large btn-ghost btn-primary">Ghost</a>
 
-                <a href="#" class="btn btn-large btn-indigo btn-flat">FLAT</a>
-                <a href="#" class="btn btn-large btn-orange disabled">disabled</a>
+                <a class="btn btn-large btn-primary btn-flat">FLAT</a>
+                <a class="btn btn-large btn-primary disabled">disabled</a>
                 <br />
-                <a href="#" class="btn btn-circle btn-raised btn-indigo"><i class="fa fa-star"></i></a>
+                <a class="btn btn-circle btn-raised btn-primary"><i class="fas fa-camera-retro"></i></a>
                 <br />
-                <a href="#" class="btn btn-large btn-orange">Large</a>
-                <a href="#" class="btn btn-medium btn-orange">Medium</a>
-                <a href="#" class="btn btn-small btn-orange">small</a>
+                <a class="btn btn-large btn-primary">Large</a>
+                <a class="btn btn-medium btn-primary">Medium</a>
+                <a class="btn btn-small btn-primary">small</a>
                 <hr />
+                <p>New Buttons</p>
+                <a class="btn btn-large btn-primary">Primary</a>
+                <a class="btn btn-large btn-link">Link</a>
+                <a class="btn btn-large btn-info">Info</a>
+                <a class="btn btn-large btn-success">Success</a>
+                <a class="btn btn-large btn-warning">Warning</a>
+                <a class="btn btn-large btn-danger">Danger</a>
+                <p>New Buttons - Other Styling</p>
+                <a class="btn btn-large btn-primary is-outlined">Outlined</a>
+                <div style="background-color:indigo;">
+                    <a class="btn btn-large btn-primary is-inverted">Inverted</a>
+                    <a class="btn btn-large btn-primary is-inverted is-outlined">Invert Outlined</a>
+                </div>
                 <h3>Forms</h3>
                 <form>
                     <fieldset>

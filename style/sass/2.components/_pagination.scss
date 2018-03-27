@@ -60,7 +60,6 @@ background-color : $navbarlinkbackgroundcoloractive; }
 .pagination ul > .disabled > a,
 .pagination ul > .disabled > a:hover {
 background-color : transparent;
-color : $secondarytextcolor;
 cursor : default; }
 
 .pagination ul > li:first-child > a,

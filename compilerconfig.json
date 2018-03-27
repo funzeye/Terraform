@@ -1,9 +1,5 @@
 ﻿[
   {
-    "outputFile": "Content/terraform.css",
-    "inputFile": "Content/terraform.scss"
-  },
-  {
     "outputFile": "style/terraform.css",
     "inputFile": "style/terraform.scss"
   },

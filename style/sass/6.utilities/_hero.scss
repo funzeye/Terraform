@@ -1,6 +1,6 @@
 // =hero =============================================================
 
-$herobackgroundcolor            : rgba(palette(indigo), .1);
+//$herobackgroundcolor            : 
 
 // Set hero’s border width
 $heroborderwidth 				: $borderwidth;
@@ -19,7 +19,7 @@ $herocolor                      : $grey;
 
 // Add optional box-shadow values or ignore
 // By default shadow colour is a tint of background colour. Adjust percentage as required
-$heroshadow						: darken($herobackgroundcolor, 10%);
+//$heroshadow						: darken($herobackgroundcolor, 10%);
 $heroshadowblur					: 10px;
 
 

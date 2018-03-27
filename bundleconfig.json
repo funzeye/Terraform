@@ -4,5 +4,11 @@
     "inputFiles": [
       "scripts/@fortawesome/fontawesome/styles.css"
     ]
+  },
+  {
+    "outputFileName": "vendor/@fortawesome/fontawesome/styles.min.css",
+    "inputFiles": [
+      "vendor/@fortawesome/fontawesome/styles.css"
+    ]
   }
 ]

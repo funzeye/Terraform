@@ -69,79 +69,81 @@ max-height : 25em; }
 
 //the new menu button
 .navigation-toggle {
-
-    float : right;
-    display : block;
-    //padding : $baselineheight / 2 $gutterwidth / 2; 
-    //border: 1px solid $dividerscolor;
+    float: right;
+    display: block;
+    //padding : $baselineheight / 2 $gutterwidth / 2;
+    border: 1px solid $bordercolor;
 
     @include mq($nav-breakpoint) {
-    display : none; }
+        display: none;
+    }
 
     padding: .75em 2% .75em 2.5em;
-	position:relative;
-	border: 4px solid palette(indigo, dark);
-	text-transform: uppercase;
-	&:hover, &:active{
-		background-color: palette(orange, dark);
-		color: $white;
-	}
+    position: relative;
+    border: 4px solid palette(indigo, dark);
+    text-transform: uppercase;
 
-	span{
-		top: 45%;
-		left: 10px;
-	}
+    &:hover, &:active {
+        background-color: palette(orange, dark);
+        color: $white;
+    }
 
-	span, span:before, span:after {
-		cursor: pointer;
-		border-radius: 1px;
-		height: 4px;
-		width: 30px;
-		background: palette(orange, dark);
-		position: absolute;
-		display: block;
-		content: '';
-	}
-	&:hover span, &:hover span:before, &:hover span:after{
-		background:white;
-	}
+    span {
+        top: 45%;
+        left: 10px;
+    }
 
-	span:before {
-		top: -7px;
-	}
+    span, span:before, span:after {
+        cursor: pointer;
+        border-radius: 1px;
+        height: 4px;
+        width: 30px;
+        background: palette(orange, dark);
+        position: absolute;
+        display: block;
+        content: '';
+    }
 
-	span:after {
-		bottom: -7px;
-	}
+    &:hover span, &:hover span:before, &:hover span:after {
+        background: white;
+    }
 
-	span, span:before, span:after {
-		-moz-transition: all 300ms ease-in-out;
-		-o-transition: all 300ms ease-in-out;
-		-webkit-transition: all 300ms ease-in-out;
-		transition: all 300ms ease-in-out;
-	}
+    span:before {
+        top: -7px;
+    }
 
-	&.active span {
-		background-color: transparent;
-	}
+    span:after {
+        bottom: -7px;
+    }
 
-	&.active span:before, &.active span:after {
-		top: 0;
-	}
+    span, span:before, span:after {
+        -moz-transition: all 300ms ease-in-out;
+        -o-transition: all 300ms ease-in-out;
+        -webkit-transition: all 300ms ease-in-out;
+        transition: all 300ms ease-in-out;
+    }
 
-	&.active span:before {
-		-moz-transform: rotate(45deg);
-		-ms-transform: rotate(45deg);
-		-o-transform: rotate(45deg);
-		-webkit-transform: rotate(45deg);
-		transform: rotate(45deg);
-	}
+    &.active span {
+        background-color: transparent;
+    }
 
-	&.active span:after {
-		-moz-transform: rotate(-45deg);
-		-ms-transform: rotate(-45deg);
-		-o-transform: rotate(-45deg);
-		-webkit-transform: rotate(-45deg);
-		transform: rotate(-45deg);
-	}
+    &.active span:before, &.active span:after {
+        top: 0;
+    }
+
+    &.active span:before {
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    &.active span:after {
+        -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
 }

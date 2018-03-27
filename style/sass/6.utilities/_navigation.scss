@@ -25,7 +25,7 @@ $navigationlinkcolorhover		: darken($navigationlinkcolor,10%);
 $navbarheight					: 44px;
 
 // By default Navbars have a flat background colour
-$navbarbackgroundcolor			: $dividerscolor;
+$navbarbackgroundcolor          : $bordercolor;
 
 // Set navbar’s border width
 $navbarborderwidth				: $borderwidth * 2;
