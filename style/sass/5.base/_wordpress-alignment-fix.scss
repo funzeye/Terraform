@@ -1,4 +1,6 @@
-﻿//we dont want the height to be set on images in wordpress posts - this happens by default when adding media in wordpress 
+﻿// = WORDPRESS ALIGNMENT FIX ================================================
+
+//we dont want the height to be set on images in wordpress posts - this happens by default when adding media in wordpress 
 img[class*="align"],
 img[class*="wp-image-"] {
     height: auto;

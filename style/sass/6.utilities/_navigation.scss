@@ -1,17 +1,9 @@
-//    NAVIGATION
-//    Site navigation
-//    Basic navbar
-//    Breadcrumbs
-//    Pagination
-//    Pager
-
-// NAVIGATION =============================================================================
-
 // =navigation
 
+// Set navigation items’ link colours
+$navigationlinkcolor: $white;
+
 // By default site navigation has a flat background colour
-// Add an optional gradient in __navigation-toggle.scss
-// Configure the gradient colours in _texture.scss
 $navigationbackgroundcolor 		: $black;
 
 // Set navigation items’ bottom border width
@@ -24,7 +16,7 @@ $navigationborderstyle			: $borderstyle;
 $navigationbordercolor 			: darken($navigationbackgroundcolor,10%);
 
 // :hover
-//$navigationlinkcolorhover		: darken($navigationlinkcolor,10%);
+$navigationlinkcolorhover		: darken($navigationlinkcolor,10%);
 
 
 // =navbar ============
@@ -33,9 +25,7 @@ $navigationbordercolor 			: darken($navigationbackgroundcolor,10%);
 $navbarheight					: 44px;
 
 // By default Navbars have a flat background colour
-// Add an optional gradient in _bootstrap-navbar.scss
-// Configure the gradient colours in _texture.scss
-//$navbarbackgroundcolor			: $dividerscolor;
+$navbarbackgroundcolor			: $dividerscolor;
 
 // Set navbar’s border width
 $navbarborderwidth				: $borderwidth * 2;
@@ -44,7 +34,7 @@ $navbarborderwidth				: $borderwidth * 2;
 $navbarborderstyle				: $borderstyle;
 
 // By default navbar’s border is a tint of $navbarbackgroundcolor. Adjust percentage as required
-//$navbarbordercolor 				: darken($navbarbackgroundcolor,10%);
+$navbarbordercolor 				: darken($navbarbackgroundcolor,10%);
 
 // Set navbar’s border radius. Default is $borderradius defined above
 $navbarborderradius				: $borderradius;
@@ -67,5 +57,5 @@ $navbarlinkbackgroundcoloractive: palette(indigo);
 $navbarlinkcoloractive			: $white;
 
 // Set navbar’s divider colour
-//$navbardividerleft				: $navbarbordercolor;
-//$navbardividerright				: lighten($navbarbordercolor,10%);
+$navbardividerleft				: $navbarbordercolor;
+$navbardividerright				: lighten($navbarbordercolor,10%);

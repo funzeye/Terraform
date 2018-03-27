@@ -1,0 +1,29 @@
+// = TYPOGRAPHY ================================================
+
+//site-wide base typography settings
+
+html {
+	font-size: 62.5%; // = 10px == 1rem/em
+	// if we leave it at 100% then 1rem/em == 16px - a slightly less intuitive scale than 10 is...
+	// ...but at least we wont be overwriting the default browser settings!!
+}
+
+body {
+    font-family: $basefontfamily;
+    @include font-size($basefontsize);
+    line-height: $baselineheight;
+    -ms-word-break: break-word;
+    word-break: break-word;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -moz-font-feature-settings: "liga" on;
+    -webkit-font-feature-settings: "liga" on;
+    font-feature-settings: "liga" on;
+
+    //@include breakpoint($bp-large) {
+        //@include font-size($basefontsize * 1.1);
+        //line-height: $baselineheight * 1.1;
+    //}
+}

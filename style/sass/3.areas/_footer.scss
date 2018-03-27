@@ -1,4 +1,6 @@
-﻿footer:not(.article-footer){
+﻿// = Footer =============================================
+
+footer:not(.article-footer){
     background-color: $black;
     color: $white;
     .copyright-container{

@@ -1,10 +1,6 @@
-﻿// Rock Hammer by Stuff and Nonsense
-// Version: <!-- $version -->
-// URL: http://stuffandnonsense.co.uk/projects/rock-hammer/
-// Version: <!-- $license -->
-// Adapted from: https://github.com/twitter/bootstrap/blob/master/less/forms.less
+﻿// = Forms =============================================
 
-// Set form’s font-family. Default is $basefontfamily defined above
+// Set form’s font-family. Default is $basefontfamily
 $formfontfamily: $basefontfamily;
 
 form {
@@ -128,7 +124,7 @@ input[type="color"] {
     &:focus {
     border-color : $forminputbordercolorfocus;
     outline : 0;
-    outline : thin dotted \ 9; }
+    outline : thin dotted \9; } 
 }
 
 input[type="radio"],
@@ -163,11 +159,6 @@ input[type="checkbox"]:focus {
     outline : thin dotted #333;
     outline : 5px auto -webkit-focus-ring-color;
     outline-offset : -2px; 
-}
-
-input,
-textarea {
-    @include placeholder($formplaceholdercolor); 
 }
 
 // radio / checkbox

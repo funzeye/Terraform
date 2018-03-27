@@ -1,8 +1,4 @@
-// Rock Hammer by Stuff and Nonsense
-// Version: <!-- $version -->
-// URL: http://stuffandnonsense.co.uk/projects/rock-hammer/
-// Version: <!-- $license -->
-// Adapted from: https://github.com/twitter/bootstrap/blob/master/less/hero-unit.less
+// = Hero ================================================
 
 .hero-unit {
     margin-bottom : $baselineheight / 2;
@@ -13,7 +9,7 @@
     //border-radius : $heroborderradius;
     color : $herocolor;
 
-    @include breakpoint($bp-medium) {
+    @include mq(tablet) {
     padding : $gutterwidth * 2;
 
     h1 {
@@ -25,7 +21,7 @@
 }
 
 p {
-    @include breakpoint($bp-medium) {
+    @include mq(tablet) {
         @include font-size($basefontsize * 1.25);
     }
 

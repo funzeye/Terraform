@@ -1,4 +1,6 @@
-﻿@mixin btn-shadow(){
+﻿// = Button ================================================
+
+@mixin btn-shadow(){
     -moz-transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 	-o-transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 	-webkit-transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);

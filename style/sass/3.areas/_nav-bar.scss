@@ -1,18 +1,10 @@
-// Rock Hammer by Stuff and Nonsense
-// Version: <!-- $version -->
-// URL: http://stuffandnonsense.co.uk/projects/rock-hammer/
-// Version: <!-- $license -->
-// Adapted from: http://codepen.io/bradfrost/pen/sHvaz
+// = Nav-Bar =============================================
 
 $transitionduration: 1s;
-$nav-breakpoint: 850px;//$bp-medium;
-
-// Set navigation items’ link colours
-$navigationlinkcolor: $white;
-
+$nav-breakpoint: 850px;
 
 #nav-toggle {
-@include breakpoint($nav-breakpoint) {
+@include mq($nav-breakpoint) {
 display : none; }
 }
 
@@ -27,7 +19,7 @@ nav[role=navigation] {
 overflow : hidden;
 max-height : 0; 
 
-@include breakpoint($nav-breakpoint) {
+@include mq($nav-breakpoint) {
 max-height : none; }
 }
 
@@ -37,9 +29,8 @@ max-height : 25em; }
 //Is this right, should it not be identical to the responsive-nav.scss #navigation-toggle? The li is giving a syntax error.
 #navigation-toggle {
     list-style-type : none;
-    @include zero;
 
-    @include breakpoint($nav-breakpoint) {
+    @include mq($nav-breakpoint) {
         margin : 0 0 0 0;
         border-width : 0; 
 
@@ -53,9 +44,8 @@ max-height : 25em; }
 	
     ul {
         list-style-type : none;
-        @include zero; 
 
-        @include breakpoint($nav-breakpoint) {
+        @include mq($nav-breakpoint) {
         margin : 0 auto; }
     }
 
@@ -66,7 +56,7 @@ max-height : 25em; }
         color : $navigationlinkcolor;
         text-transform : uppercase;
 
-        @include breakpoint($nav-breakpoint) {
+        @include mq($nav-breakpoint) {
         border-width : 0;
         @include font-size(14); 
         text-transform : none; }
@@ -85,7 +75,7 @@ max-height : 25em; }
     //padding : $baselineheight / 2 $gutterwidth / 2; 
     //border: 1px solid $dividerscolor;
 
-    @include breakpoint($nav-breakpoint) {
+    @include mq($nav-breakpoint) {
     display : none; }
 
     padding: .75em 2% .75em 2.5em;

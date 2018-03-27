@@ -6,33 +6,36 @@
 	position: fixed;
 	right: 0;
 	z-index: 100;
-	@include breakpoint($bp-large){
+	@include mq(desktop){
 		margin-right: 50px;
 	}
 }
 
+// = Back to Top ================================================
+
 #back-top a {
-background-color: palette(orange, light);
-background-repeat: no-repeat;
-background-position: center center;
-display: block;
-height: 60px;
-width: 60px;
-line-height: 60px;
-@include breakpoint($bp-large){
-	height: 40px;
-	width: 40px;
-	line-height: 40px;
-}
-outline: medium none;
+    background-color: palette(orange, light);
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: block;
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    
+    @include mq(desktop) {
+        height: 40px;
+        width: 40px;
+        line-height: 40px;
+    }
 
-text-align: center;
+    outline: medium none;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
 
-color: #fff;
-text-decoration: none;
-	&:hover{
-		background-color:palette(indigo);
-	}
+    &:hover {
+        background-color: palette(indigo);
+    }
 }
 
 #back-top a i {
