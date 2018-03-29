@@ -72,7 +72,7 @@ max-height : 25em; }
     float: right;
     display: block;
     //padding : $baselineheight / 2 $gutterwidth / 2;
-    border: 1px solid $bordercolor;
+    border: 1px solid $border-color;
 
     @include mq($nav-breakpoint) {
         display: none;

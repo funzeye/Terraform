@@ -11,11 +11,11 @@ $tablebackgroundcolor			: transparent;
 // Set table row :hover colour
 //$tablebackgroundhover 			: $disabledhintcolor;
 
-// Set table border widths. Default is $borderwidth defined above
-$tableborderwidth				: $borderwidth;
+// Set table border widths. Default is $border-width defined above
+$tableborderwidth				: $border-width;
 
 // Set tables’ border styles
-$tableborderstyle				: $borderstyle;
+$tableborderstyle				: $border-style;
 
 // Set tables’ border colour
 $tablebordercolor               : $grey;

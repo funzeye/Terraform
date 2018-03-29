@@ -7,10 +7,10 @@ $navigationlinkcolor: $white;
 $navigationbackgroundcolor 		: $black;
 
 // Set navigation items’ bottom border width
-$navigationborderwidth			: $borderwidth;
+$navigationborderwidth			: $border-width;
 
 // Set navigation items’ bottom border style
-$navigationborderstyle			: $borderstyle;
+$navigationborderstyle			: $border-style;
 
 // Set navigation items’ bottom border colour
 $navigationbordercolor 			: darken($navigationbackgroundcolor,10%);
@@ -25,19 +25,19 @@ $navigationlinkcolorhover		: darken($navigationlinkcolor,10%);
 $navbarheight					: 44px;
 
 // By default Navbars have a flat background colour
-$navbarbackgroundcolor          : $bordercolor;
+$navbarbackgroundcolor          : $border-color;
 
 // Set navbar’s border width
-$navbarborderwidth				: $borderwidth * 2;
+$navbarborderwidth				: $border-width * 2;
 
 // Set navbar’s’ border style
-$navbarborderstyle				: $borderstyle;
+$navbarborderstyle				: $border-style;
 
 // By default navbar’s border is a tint of $navbarbackgroundcolor. Adjust percentage as required
 $navbarbordercolor 				: darken($navbarbackgroundcolor,10%);
 
-// Set navbar’s border radius. Default is $borderradius defined above
-$navbarborderradius				: $borderradius;
+// Set navbar’s border radius. Default is $border-radius defined above
+$navbarborderradius				: $border-radius;
 
 // Set navbar’s text colour
 $navbarcolor                    : $black;

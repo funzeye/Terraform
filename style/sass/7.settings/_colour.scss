@@ -1,12 +1,12 @@
 ﻿// took inspo from https://bulma.io/documentation/overview/customize/ and altered it to fit my way
 @import "_colour-functions";
 
+//=====================================================================
 // Our theme:
 $primary: indigo !default;
 $primary-contrast: findColorContrast($primary) !default;
 $accent: orange !default;
 $accent-contrast: findColorContrast($accent) !default;
-//=====================================================================
 //Default Theme - use custom nested sass map for this
 //choose 1 primary and 1 accent colour
 //we could use scale-color() or tint/shade to get lighter and darker hues...
@@ -23,6 +23,7 @@ $theme: (primary:
             invert  :invert($accent),
             text-contrast : $accent-contrast)
     );
+
 
 // All Other System Default Colours:
 
@@ -75,9 +76,9 @@ $light-contrast: $dark !default;
 $dark-contrast: $light !default;
 
 // General colors
-$background: $white-ter !default;
+$background-color: $white-ter !default;
 
-$bordercolor: $grey-lighter !default;
+$border-color: $grey-lighter !default;
 $border-hover: $grey-light !default;
 
 // Text colors
@@ -87,10 +88,10 @@ $textcolor-strong: $grey-darker !default;
 
 // Code colors
 $code: $red !default;
-$code-background: $background !default;
+$code-background: $background-color !default;
 
 $pre: $textcolor !default;
-$pre-background: $background !default;
+$pre-background: $background-color !default;
 
 // Link colors
 $link: $blue !default;
@@ -109,5 +110,5 @@ $link-active-border: $grey-dark !default;
 
 // Lists and maps
 // Q. why use maps for these? - A. one good reason is for looping functions - makes it easy to create a button of every color dynamically - see button.scss for example
-$colors: ("white": ($white, $black), "black": ($black, $white), "light": ($light, $light-contrast), "dark": ($dark, $dark-contrast), "primary": ($primary, $primary-contrast), "link": ($link, $link-contrast), "info": ($info, $info-contrast), "success": ($success, $success-contrast), "warning": ($warning, $warning-contrast), "danger": ($danger, $danger-contrast)) !default;
+$colors: ("primary": ($primary, $primary-contrast), "accent": ($accent, $accent-contrast), "white": ($white, $black), "black": ($black, $white), "light": ($light, $light-contrast), "dark": ($dark, $dark-contrast), "link": ($link, $link-contrast), "info": ($info, $info-contrast), "success": ($success, $success-contrast), "warning": ($warning, $warning-contrast), "danger": ($danger, $danger-contrast)) !default;
 $shades: ("black-bis": $black-bis, "black-ter": $black-ter, "grey-darker": $grey-darker, "grey-dark": $grey-dark, "grey": $grey, "grey-light": $grey-light, "grey-lighter": $grey-lighter, "white-ter": $white-ter, "white-bis": $white-bis) !default;

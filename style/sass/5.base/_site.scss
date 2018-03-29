@@ -25,7 +25,7 @@ width : device-width; }
 /* Set up a decent box model on the root element */
 html {
     @include font-size($basefontsize);
-    padding: $verticalrythm;
+    //padding: $verticalrythm;
     padding-bottom: 0;
     background-color: #fff;
     color: $textcolor;

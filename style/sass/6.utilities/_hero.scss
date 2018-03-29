@@ -3,16 +3,16 @@
 //$herobackgroundcolor            : 
 
 // Set hero’s border width
-$heroborderwidth 				: $borderwidth;
+$heroborderwidth 				: $border-width;
 
 // And hero’s border style
-$heroborderstyle 				: $borderstyle;
+$heroborderstyle 				: $border-style;
 
 // By default hero’s border is a tint of $herobackgroundcolor. Adjust percentage as required
 //$herobordercolor				: darken($herobackgroundcolor, 20%);
 
-// Set hero’s border radius. Default is $borderradius defined above
-$heroborderradius				: $borderradius;
+// Set hero’s border radius. Default is $border-radius defined above
+$heroborderradius				: $border-radius;
 
 // By default colour is a tint of background colour. Adjust percentage as required
 $herocolor                      : $grey;
