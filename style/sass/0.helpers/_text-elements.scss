@@ -1,0 +1,27 @@
+﻿.lead {
+    @include font-size($base-font-size * 1.05);
+
+    @include mq(desktop) {
+        @include font-size($base-font-size * 1.35);
+    }
+}
+
+.secondary {
+    @include font-size($base-font-size / 1.25);
+
+    @include mq(desktop) {
+        @include font-size($base-font-size / 1.15);
+    }
+}
+
+.tertiary {
+    @include font-size($base-font-size / 1.35);
+
+    @include mq(desktop) {
+        @include font-size($base-font-size / 1.25);
+    }
+}
+
+.amp {
+    font-family: $amp-font-family;
+}

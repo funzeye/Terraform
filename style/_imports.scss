@@ -9,6 +9,7 @@
 @import "sass/6.utilities/_basics";
 @import "sass/6.utilities/_borders";
 @import "sass/6.utilities/_font-size-mixin";
+@import "sass/6.utilities/_line-height-mixin";
 @import "sass/6.utilities/_forms";
 @import "sass/6.utilities/_hero";
 @import "sass/6.utilities/_navigation";
@@ -18,9 +19,10 @@
 
 // Add the Base =======================================
 @import "../vendor/normalize.css/normalize";
+@import "sass/5.base/_colour";
+@import "sass/5.base/_typography";
 @import "sass/5.base/_print";
 @import "sass/5.base/_site";
-@import "sass/5.base/_typography";
 @import "sass/5.base/_wordpress-alignment-fix"; //use on wordpress sites only
 
 //Add the Elements ====================================
@@ -49,3 +51,6 @@
 
 //Add the Pages ======================================
 @import "sass/1.pages/_home-page";
+
+//Add the Helpers ======================================
+@import "sass/0.helpers/_text-elements";

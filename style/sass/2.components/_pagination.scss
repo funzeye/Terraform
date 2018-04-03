@@ -2,7 +2,7 @@
 
 
 $paginationpadding: 0.5em;
-$paginationfontfamily: $basefontfamily;
+$paginationfontfamily: $base-font-family;
 $paginationbackgroundcolor: $white;
 $paginationborderwidth: 2px;
 $paginationborderstyle: solid;
@@ -17,7 +17,7 @@ $paginationendcolor:              $black;
 $paginationborderradius: 5px;
 
 .pagination {
-margin : 0 0 $baselineheight 0; }
+margin : 0 0 $base-line-height 0; }
 
 .pagination ul {
 display : inline-block;
@@ -33,14 +33,14 @@ display : inline; }
 float : left; 
 padding : $paginationpadding;
 font-family : $paginationfontfamily;
-@include font-size($basefontsize / 1.25);
-line-height : $baselineheight;
+@include font-size($base-font-size / 1.25);
+line-height : $base-line-height;
 text-decoration : none;
 background-color : $paginationbackgroundcolor;
 // @include paginationgrad;
 border : $paginationborderwidth $paginationborderstyle $paginationbordercolor;
 border-left-width : 0;
-color : $linkcolor; }
+color : $link-color; }
 
 .pagination ul > li > a:hover {
 background-color : $paginationbackgroundcolorhover;

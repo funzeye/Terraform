@@ -3,6 +3,6 @@
 	width:90%;
     max-width: $maxwidthpx;
     max-width: $maxwidth;
-	padding: $baselineheight 5%;
+	padding: #{$base-line-height + "em"} 5%;
 	@include clearfix;
 }

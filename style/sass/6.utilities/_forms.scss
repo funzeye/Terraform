@@ -20,7 +20,7 @@ $forminputbordercolorfocus 		: darken($forminputbordercolor, 25%);
 $forminputborderradius			: $border-radius;
 
 // Set inputs’ font-family. Default is $border-radius defined above
-$forminputfontfamily			: $altfontfamily;
+$forminputfontfamily			: $alt-font-family;
 
 // Set placeholder text colour
 $formplaceholdercolor           : $grey;
@@ -63,13 +63,13 @@ $buttonbottombordercolor 		: darken($buttonbordercolor, 5%);
 // Set the default button’s border radius. Default is $border-radius defined above
 $buttonborderradius				: $border-radius;
 
-// Set the button’s font-family. Default is $basefontfamily defined above
-$buttonfontfamily 				: $basefontfamily;
+// Set the button’s font-family. Default is $base-font-family defined above
+//$buttonfontfamily 				: $base-font-family;
 
 // Set the button’s font-size. 
 // Use only a number. Units (em/px/%) are not required
-// Default is $basefontsize defined above
-$buttonfontsize 				: $basefontsize;
+// Default is $base-font-size defined above
+//$buttonfontsize 				: $base-font-size;
 
 // Set the default button’s text colour
 // Colours for :hover and :active  are derived automatically from $buttoncolor

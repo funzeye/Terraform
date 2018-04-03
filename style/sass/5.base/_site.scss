@@ -1,10 +1,5 @@
 // = SITE ================================================
-
 // Some people add this kind of file to the 'elements' folder which I can understand as we are using html/body elements here.
-/**
- *
- * This file contains very basic styles.
- */
 
 @-webkit-viewport { 
 width : device-width; }
@@ -21,21 +16,41 @@ width : device-width; }
 @viewport { 
 width : device-width; }
 
+$base-font-size: $global-font-size !default;
+$base-line-height: $global-line-height !default;
 
 /* Set up a decent box model on the root element */
 html {
-    @include font-size($basefontsize);
+    font-size: 62.5%; // = 10px == 1rem/em
+    // if we leave it at 100% then 1rem/em == 16px - a slightly less intuitive scale than 10 is...
+    // ...but at least we wont be overwriting the default browser settings!!
     //padding: $verticalrythm;
-    padding-bottom: 0;
-    background-color: #fff;
-    color: $textcolor;
 
+    padding-bottom: 0;
+    background-color: $background-color;
+    color: $text-color;
     box-sizing: border-box;
     -webkit-overflow-scrolling: touch;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
     text-size-adjust: 100%;
+}
+
+body {
+    font-family: $base-font-family;
+    @include font-size($base-font-size);
+    line-height: $base-line-height;
+    -ms-word-break:normal;
+    word-break:normal;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-feature-settings: "liga" on;
+    -webkit-font-feature-settings: "liga" on;
+    font-feature-settings: "liga" on;
 }
 
 /**

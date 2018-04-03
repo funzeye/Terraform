@@ -74,14 +74,15 @@ $button-disabled-opacity: 0.5 !default;
     margin: 0;
     padding: 15px;
     font-size: 26px;
-    //width: 56px;
-    //height: 56px;
-    &, &:hover {
-        //.variations(#{""}, background-color, transparent);
-    }
+    height: 3em;
+    min-width: 3em;
 
     & {
         border-radius: 100%;
+    }
+
+    > .svg-inline--fa {
+        width: 100%;
     }
 }
 

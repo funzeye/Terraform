@@ -1,0 +1,4 @@
+﻿@mixin line-height($number) {
+    line-height: #{ $number * $global-line-height + 'px'};
+    line-height: #{ ($number * $global-line-height)/10 + 'rem'};
+}

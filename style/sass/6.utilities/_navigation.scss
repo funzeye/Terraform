@@ -42,9 +42,6 @@ $navbarborderradius				: $border-radius;
 // Set navbar’s text colour
 $navbarcolor                    : $black;
 
-// Set navbar’s brand colour
-$navbarbrandcolor				: palette(indigo);
-
 // Set navbar’s link colours
 $navbarlinkcolor                : $grey;
 
@@ -53,7 +50,6 @@ $navbarlinkbackgroundcolorhover : rgba($navbarlinkcolor,.25);
 $navbarlinkcolorhover           : $grey;
 
 // :hover
-$navbarlinkbackgroundcoloractive: palette(indigo);
 $navbarlinkcoloractive			: $white;
 
 // Set navbar’s divider colour

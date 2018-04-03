@@ -3,65 +3,33 @@
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
     margin-bottom: 0.5em;
-    font-family: $baseheadingfont;
-    font-weight: $baseheadingfontweight;
-    color: $baseheadingfontcolor;
+    font-family: $base-heading-font;
+    font-weight: $base-heading-font-weight;
+    color: $base-heading-font-color;
+}
 
-    small {
-        font-weight: normal;
-        line-height: 1;
+// mobile-font-size, desktop font-size pairs
+$headings: ( 
+    "h1": ($base-font-size * 2, $base-font-size * 3), 
+    "h2": ($base-font-size * 1.75, $base-font-size * 2.5), 
+    "h3": ($base-font-size * 1.6, $base-font-size * 2), 
+    "h4": ($base-font-size * 1.45, $base-font-size * 1.6), 
+    "h5": ($base-font-size * 1.3, $base-font-size * 1.4), 
+    "h6": ($base-font-size * 1, $base-font-size * 1.1));
+
+@each $name, $pair in $headings {
+    $font-size :nth($pair, 2);
+    $font-size-mobile: nth($pair, 1);
+
+    #{$name} {
+        @include font-size($font-size-mobile);
+        @include line-height($font-size-mobile);
+        //line-height: 1.2;
+        //margin-bottom: $verticalrythm / 2;
+        @include mq(desktop) {
+            @include font-size($font-size);
+            @include line-height($font-size);
+            //line-height: 1.05;
+        }
     }
-}
-
-h1{
-    @include font-size($basefontsize * 2);
-    line-height: 1.2;
-    //margin-bottom: $verticalrythm / 2;
-    @include mq(desktop) {
-        @include font-size($basefontsize * 3);
-        line-height: 1.05;
-    }
-}
-
-h2{
-    @include font-size($basefontsize * 1.75);
-    line-height: 1.15384615;
-    //margin-bottom: $verticalrythm / 2;
-    @include mq(desktop) {
-        @include font-size($basefontsize * 2.5);
-        line-height: 1.25;
-    }
-}
-
-h3{
-    @include font-size($basefontsize * 1.6);
-    line-height: 1.13636364em;
-    //margin-bottom: $verticalrythm / 2;
-    @include mq(desktop) {
-        @include font-size($basefontsize * 2);
-        line-height: 1.25;
-    }
-}
-
-h4{
-    @include font-size($basefontsize * 1.45);
-    line-height: 1.111111;
-    //margin-bottom: $verticalrythm / 2;
-    @include mq(desktop) {
-        @include font-size($basefontsize * 1.6);
-        line-height: 1.222222;
-    }
-}
-
-h5{
-    @include font-size($basefontsize * 1.3);
-    //margin-bottom: $verticalrythm / 1.5;
-}
-
-h6{
-    @include font-size($basefontsize);
-    //margin-bottom: $verticalrythm;
-    font-weight: normal;
-    letter-spacing: 1px;
-    text-transform: uppercase;
 }

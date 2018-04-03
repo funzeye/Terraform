@@ -1,46 +1,22 @@
-﻿// took inspo from https://bulma.io/documentation/overview/customize/ and altered it to fit my way
+﻿// took variable inspo from: https://bulma.io/documentation/overview/customize/ and altered it to fit my way
 @import "_colour-functions";
 
-//=====================================================================
-// Our theme:
-$primary: indigo !default;
-$primary-contrast: findColorContrast($primary) !default;
-$accent: orange !default;
-$accent-contrast: findColorContrast($accent) !default;
-//Default Theme - use custom nested sass map for this
-//choose 1 primary and 1 accent colour
-//we could use scale-color() or tint/shade to get lighter and darker hues...
-$theme: (primary: 
-            (base    : $primary, 
-            light    : lighten($primary,20%),
-            dark     : darken($primary,20%), 
-            invert   : invert($primary), 
-            text-contrast : $primary-contrast),
-        accent: 
-            (base   : $accent, 
-            light   : lighten($accent,20%), 
-            dark    :darken($accent,20%), 
-            invert  :invert($accent),
-            text-contrast : $accent-contrast)
-    );
-
-
-// All Other System Default Colours:
-
+// Our System Default Colours:
+//Black
 $black: hsl(0, 0%, 4%) !default;
 $black-bis: hsl(0, 0%, 7%) !default;
 $black-ter: hsl(0, 0%, 14%) !default;
-
+// Grey - Light and Dark
 $grey-darker: hsl(0, 0%, 21%) !default;
 $grey-dark: hsl(0, 0%, 29%) !default;
 $grey: hsl(0, 0%, 48%) !default;
 $grey-light: hsl(0, 0%, 71%) !default;
 $grey-lighter: hsl(0, 0%, 86%) !default;
-
+//White
 $white-ter: hsl(0, 0%, 96%) !default;
 $white-bis: hsl(0, 0%, 98%) !default;
 $white: hsl(0, 0%, 100%) !default;
-
+//System Colours
 $orange: hsl(14, 100%, 53%) !default;
 $yellow: hsl(48, 100%, 67%) !default;
 $green: hsl(141, 71%, 48%) !default;
@@ -49,6 +25,7 @@ $cyan: hsl(204, 86%, 53%) !default;
 $blue: hsl(217, 71%, 53%) !default;
 $purple: hsl(271, 100%, 71%) !default;
 $red: hsl(348, 100%, 61%) !default;
+
 // Derived Colours - Base Colours
 $info: $cyan !default;
 $success: $green !default;
@@ -79,36 +56,36 @@ $dark-contrast: $light !default;
 $background-color: $white-ter !default;
 
 $border-color: $grey-lighter !default;
-$border-hover: $grey-light !default;
+$border-color-hover: $grey-light !default;
 
 // Text colors
-$textcolor: $grey-dark !default;
-$textcolor-light: $grey !default;
-$textcolor-strong: $grey-darker !default;
+$text-color: $grey-dark !default;
+$text-color-light: $grey !default;
+$text-color-strong: $grey-darker !default;
 
 // Code colors
-$code: $red !default;
-$code-background: $background-color !default;
+$code-color: $red !default;
+$code-color-background: $background-color !default;
 
-$pre: $textcolor !default;
-$pre-background: $background-color !default;
+$pre-color: $text-color !default;
+$pre-color-background: $background-color !default;
 
 // Link colors
-$link: $blue !default;
-$link-contrast: $blue-contrast !default;
+$link-color: $blue !default;
+$link-color-contrast: $blue-contrast !default;
 
-$link-visited: $purple !default;
+$link-color-visited: $purple !default;
 
-$link-hover: $grey-darker !default;
-$link-hover-border: $grey-light !default;
+$link-color-hover: $grey-darker !default;
+$link-color-hover-border: $grey-light !default;
 
-$link-focus: $grey-darker !default;
-$link-focus-border: $blue !default;
+$link-color-focus: $grey-darker !default;
+$link-color-focus-border: $blue !default;
 
-$link-active: $grey-darker !default;
-$link-active-border: $grey-dark !default;
+$link-color-active: $grey-darker !default;
+$link-color-active-border: $grey-dark !default;
 
 // Lists and maps
 // Q. why use maps for these? - A. one good reason is for looping functions - makes it easy to create a button of every color dynamically - see button.scss for example
-$colors: ("primary": ($primary, $primary-contrast), "accent": ($accent, $accent-contrast), "white": ($white, $black), "black": ($black, $white), "light": ($light, $light-contrast), "dark": ($dark, $dark-contrast), "link": ($link, $link-contrast), "info": ($info, $info-contrast), "success": ($success, $success-contrast), "warning": ($warning, $warning-contrast), "danger": ($danger, $danger-contrast)) !default;
+$colors: ("white": ($white, $black), "black": ($black, $white), "light": ($light, $light-contrast), "dark": ($dark, $dark-contrast), "link": ($link-color, $link-color-contrast), "info": ($info, $info-contrast), "success": ($success, $success-contrast), "warning": ($warning, $warning-contrast), "danger": ($danger, $danger-contrast)) !default;
 $shades: ("black-bis": $black-bis, "black-ter": $black-ter, "grey-darker": $grey-darker, "grey-dark": $grey-dark, "grey": $grey, "grey-light": $grey-light, "grey-lighter": $grey-lighter, "white-ter": $white-ter, "white-bis": $white-bis) !default;

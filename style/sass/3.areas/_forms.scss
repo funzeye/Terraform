@@ -1,18 +1,18 @@
 ﻿// = Forms =============================================
 
-// Set form’s font-family. Default is $basefontfamily
-$formfontfamily: $basefontfamily;
+// Set form’s font-family. Default is $base-font-family
+$formfontfamily: $base-font-family;
 
 form {
-    margin : 0 0 $baselineheight 0;
+    margin : 0 0 $base-line-height 0;
     font-family : $formfontfamily;
 
     p {
-    margin-bottom : $baselineheight / 2; }
+    margin-bottom : $base-line-height / 2; }
 
     ul {
     list-style-type : none;
-    margin : 0 0 $baselineheight 0;
+    margin : 0 0 $base-line-height 0;
     padding : 0; }
 
     br {
@@ -20,7 +20,7 @@ form {
 }
 
 fieldset {
-    margin-bottom : $baselineheight;
+    margin-bottom : $base-line-height;
     padding : 0;
     border-width : 0; 
 
@@ -33,16 +33,16 @@ legend {
     width : 100%;
     margin-bottom : $verticalrythm ;
     *margin-left : -7px;
-    //padding : 0 0 $baselineheight / 2 0;
+    //padding : 0 0 $base-line-height / 2 0;
     border : 0;
-    color : $textcolor;
-    @include font-size($basefontsize * 1.5);
+    color : $text-color;
+    @include font-size($base-font-size * 1.5);
     font-weight : bold;
-    line-height : $baselineheight;
+    line-height : $base-line-height;
     white-space : normal; 
 
     small {
-    font-size : $baselineheight * .75;
+    font-size : $base-line-height * .75;
     color : $formsmallcolor; }
 }
 
@@ -55,8 +55,8 @@ textarea {
 
 label {
     display : block;
-    margin-bottom : $baselineheight / 5;
-    @include font-size($basefontsize); 
+    margin-bottom : $base-line-height / 5;
+    @include font-size($base-font-size); 
     font-weight: bold;
 }
 
@@ -78,8 +78,8 @@ input[type="tel"]{
     display : inline-block;
     margin-bottom : $verticalrythm / 1.5;
     padding : $forminputpadding;
-    @include font-size($basefontsize);
-    line-height : $baselineheight;
+    @include font-size($base-font-size);
+    line-height : $base-line-height;
     color : inherit;
     border-radius : $forminputborderradius;
     vertical-align : middle; 
@@ -165,8 +165,8 @@ input[type="checkbox"]:focus {
 
 .radio,
 .checkbox {
-    min-height : $baselineheight;
-    @include font-size($basefontsize); 
+    min-height : $base-line-height;
+    @include font-size($base-font-size); 
     font-weight:normal;
 }
 
@@ -217,9 +217,9 @@ opacity : .25; }
 // actions
 
 .form-actions {
-margin-top : $baselineheight;
-margin-bottom : $baselineheight;
-padding : ($baselineheight - 1) $gutterwidth $baselineheight;
+margin-top : $base-line-height;
+margin-bottom : $base-line-height;
+padding : ($base-line-height - 1) $gutterwidth $base-line-height;
 @include clearfix; }
 
 // placeholder
@@ -236,6 +236,6 @@ padding : ($baselineheight - 1) $gutterwidth $baselineheight;
 .help-block {
     display: block;
     margin-bottom: $verticalrythm / 1.5;
-    @include font-size($basefontsize * 0.75);
+    @include font-size($base-font-size * 0.75);
     margin-top: -1em;
 }

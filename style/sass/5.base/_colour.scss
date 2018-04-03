@@ -1,0 +1,21 @@
+﻿// = Base.Colour ================================================
+// Set the colours for the current site
+
+// some color theory: http://printingcode.runemadsen.com/lecture-color/
+// really good color palettes: https://mineral-ui.com/color + theory behind them: https://uxplanet.org/designing-systematic-colors-b5d2605b15c
+// useful colour palette generator: https://palx.jxnblk.com
+// useful color gen to find accent color: http://paletton.com
+
+//=====================================================================
+// Our theme:
+$primary: hsl(240, 70%, 59%) !default; //#4D4DE0
+$primary-contrast: findColorContrast($primary) !default;
+$accent: complement($primary);
+$accent-contrast: findColorContrast($accent) !default;
+//Default Theme - use custom nested sass map for this
+//choose 1 primary and 1 accent colour
+//we could use scale-color() or tint/shade or lighten/darken to get lighter and darker hues...
+$theme: (primary: (base : $primary, light : lighten($primary,20%), dark : darken($primary,20%), invert : invert($primary), text-contrast : $primary-contrast), accent: (base : $accent, light : lighten($accent,20%), dark :darken($accent,20%), invert :invert($accent), text-contrast : $accent-contrast) );
+
+$addThemeColors: ( "primary": ($primary, $primary-contrast), "accent": ($accent, $accent-contrast) );
+$colors: map-merge($colors, $addThemeColors);

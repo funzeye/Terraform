@@ -1,19 +1,16 @@
 // = Links ================================================
 
-$linkcolor:palette(orange, dark);
-$linkcolorhover:palette(orange, light);
-
 a {
   transition: color 0.1s linear;
-  color: $linkcolor;
+  color: $link-color;
   text-decoration: none;
 
   &:hover {
-    //color: $linkcolorhover;
+    //color: $link-color-hover;
   }
 
   &:active, &:focus {
-    //color: $linkcolorhover;
+    //color: $link-color-hover;
     outline: none;
   }
 }

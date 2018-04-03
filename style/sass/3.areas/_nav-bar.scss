@@ -71,7 +71,7 @@ max-height : 25em; }
 .navigation-toggle {
     float: right;
     display: block;
-    //padding : $baselineheight / 2 $gutterwidth / 2;
+    //padding : $base-line-height / 2 $gutterwidth / 2;
     border: 1px solid $border-color;
 
     @include mq($nav-breakpoint) {

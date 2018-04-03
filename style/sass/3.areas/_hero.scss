@@ -1,7 +1,7 @@
 // = Hero ================================================
 
 .hero-unit {
-    margin-bottom : $baselineheight / 2;
+    margin-bottom : $base-line-height / 2;
     padding : $gutterwidth;
     //background-color : $herobackgroundcolor;
     // @include herograd;
@@ -13,7 +13,7 @@
     padding : $gutterwidth * 2;
 
     h1 {
-    margin-bottom : $baselineheight / 2;
+    margin-bottom : $base-line-height / 2;
     //@include font-size(48);
     line-height : 1;
     //letter-spacing : -1px; 
@@ -22,7 +22,7 @@
 
 p {
     @include mq(tablet) {
-        @include font-size($basefontsize * 1.25);
+        @include font-size($base-font-size * 1.25);
     }
 
 &:last-child {

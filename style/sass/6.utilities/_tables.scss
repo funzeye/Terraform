@@ -1,24 +1,24 @@
 // = tables ==========================================================
 
-$tablepadding 					: 8px;
+$table-padding 					: 8px;
 
 // Set table background colour
-$tablebackgroundcolor			: transparent;
+$table-background-color			: transparent;
 
 // Set optional alternate table row background colour
-//$tablebackgroundstripe 			: $disabledhintcolor;
+//$tablebackgroundstripe: $disabledhintcolor;
 
 // Set table row :hover colour
-//$tablebackgroundhover 			: $disabledhintcolor;
+$table-background-hover 		: $grey-lighter;
 
 // Set table border widths. Default is $border-width defined above
-$tableborderwidth				: $border-width;
+$table-border-width				: $border-width;
 
 // Set tables’ border styles
-$tableborderstyle				: $border-style;
+$table-border-style				: $border-style;
 
 // Set tables’ border colour
-$tablebordercolor               : $grey;
+$table-border-color             : $grey;
 
-// Set tables’ font-family. Default is $altfontfamily defined above
-$tablefontfamily 				: $altfontfamily;
+// Set tables’ font-family. Default is $alt-font-family defined above
+$tablefontfamily 				: $alt-font-family;

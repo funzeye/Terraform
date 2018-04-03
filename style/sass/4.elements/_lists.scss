@@ -1,14 +1,14 @@
 ﻿// = Lists ================================================
 
 ul, ol {
-  margin-bottom: $baselineheight / 2;
-  padding-left: $baselineheight;
+  margin-bottom: $base-line-height / 2;
+  padding-left: $base-line-height;
   //list-style-type: none;
 
   &%plain-ul, &%plain-ol {
     //list-style-type: disc;
-    //margin-bottom: $baselineheight / 2;
-    //padding-left: $baselineheight;
+    //margin-bottom: $base-line-height / 2;
+    //padding-left: $base-line-height;
     margin: 0;
     padding: 0;
     list-style-type: none;
@@ -16,17 +16,17 @@ ul, ol {
 
   /*&%default-ol {
     list-style-type: decimal;
-    margin-bottom: $baselineheight / 2;
-    padding-left: $baselineheight;
+    margin-bottom: $base-line-height / 2;
+    padding-left: $base-line-height;
   }*/
 }
 
 dl {
-  margin-bottom: $baselineheight / 2;
+  margin-bottom: $base-line-height / 2;
 
   dt {
     font-weight: bold;
-    margin-top: $baselineheight / 2;
+    margin-top: $base-line-height / 2;
   }
 
   dd {
