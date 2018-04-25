@@ -1,2 +1,2 @@
-﻿Vendor js files are in Scripts Folder - e.g. Respond.js
+﻿Vendor js files are in Vendor Folder - e.g. Respond.js
 This folder is for your own custom JS.

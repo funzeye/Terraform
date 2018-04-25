@@ -11,8 +11,7 @@
     <link rel="apple-touch-icon" href="icon.png">
     <!-- Place favicon.ico in the root directory -->
 
-    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
-    <link href="vendor/@fortawesome/fontawesome/styles.css" rel="stylesheet" /><!--Recommend switching to min version on deployment-->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
     <!--[if (gt IE 8) | (IEMobile)]><!-->
     <link href="style/terraform.min.css" rel="stylesheet"><!--Recommend switching to min version on deployment-->
     <!--<![endif]-->
@@ -20,11 +19,11 @@
     <link href="style/old-ie.min.css" rel="stylesheet">
     <![endif]-->
     <!-- head javascript - start - PLACE SCRIPTS HERE THAT NEED TO BE RUN IN HEAD - RECOMMEND MINIFY + BUNDLING -->
-    <script src="vendor/jquery/dist/jquery.min.js"></script>
+    <!--<script type="text/javascript" src="vendor/jquery.min.js"></script>-->
     <!-- head javascript - end -->
     <!--my most used fonts - comment out unused-->
-    <!--<link href='https://fonts.googleapis.com/css?family=Merriweather:400,700,400italic,700italic' rel='stylesheet' type='text/css'>--><!-- serif -->
-    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,400italic,700italic' rel='stylesheet' type='text/css'><!--san serif-->
+    <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet"><!--serif-->
 </head>
 <body>
     <!--[if lte IE 9]>
@@ -180,8 +179,8 @@
     </main>
     <footer role="contentinfo">
         <div class="wrapper">
-            <!--Works in conjunction with smooth scroll-->
-            <p id="back-top"> <a href="#header"><i class="fa fa-angle-double-up"></i></a></p>
+            <!--Works in conjunction with smooth scroll -deprecated-->
+            <!--<p id="back-top"> <a href="#header"><i class="fa fa-angle-double-up"></i></a></p>-->
 
             <small>vX.X by <a href="#" target="_blank">Company Name</a></small> <small id="footerCopyright">© 2015 - Company Name</small>
         </div>
@@ -189,9 +188,7 @@
 
     <!-- START body javascript -->
     <!-- ADD ALL YOUR BODY JAVASCRIPT FILES HERE - RECOMMEND USING HEAD.JS TO BUNDLE AND MINIFY -->
-    <script src="js/button-ripple.js"></script>
     <script src="js/nav-toggle.js"></script>
-    <script src="js/smooth-scroll.js"></script>
     <!-- END body javascript -->
     <!-- inline js (e.g. Google Analytics code) here -->
     <!--<script>
