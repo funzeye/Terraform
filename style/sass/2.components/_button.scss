@@ -35,7 +35,7 @@ $button-disabled-opacity: 0.5 !default;
     position: relative;
     cursor: pointer;
     border-radius: 4px;
-    text-transform: uppercase;
+    text-transform: capitalize;
     text-decoration: none;
     overflow: hidden;
     border: 1px solid $button-border-color;
@@ -72,17 +72,23 @@ $button-disabled-opacity: 0.5 !default;
 //circle floating action
 .btn-circle {
     margin: 0;
-    padding: 15px;
-    font-size: 26px;
-    height: 3em;
-    min-width: 3em;
-
+    text-align: center;
+    line-height: normal;
+    padding:7.5px;
     & {
         border-radius: 100%;
     }
 
-    > .svg-inline--fa {
-        width: 100%;
+    &.btn-large {
+        padding: 20px;
+    }
+
+    &.btn-medium {
+        padding: 10px;
+    }
+
+    &.btn-small {
+        padding: 5px;
     }
 }
 
@@ -96,7 +102,15 @@ $button-disabled-opacity: 0.5 !default;
         background: $color;
         border: 1px solid transparent;
 
-        &:hover {
+        &:hover, &.hovered {
+            background: darken($color, 10%);
+        }
+
+        &:focus:not(:active), &.focused:not(:active) {
+            box-shadow: 0 0 0 0.2em rgba(52, 208, 88, 0.4);
+        }
+
+        &:active, &.active {
             background: darken($color, 20%);
         }
 
@@ -107,12 +121,13 @@ $button-disabled-opacity: 0.5 !default;
         }
 
         &.btn-flat {
-            background-color: $color-contrast;
+            // background-color: $color-contrast;
+            background-color: transparent;
             color: $color;
             border-color: transparent;
 
-            &:hover {
-                background-color: darken($color-contrast, 5%);
+            &:active {
+                background-color: $color-contrast;
             }
 
             &[disabled] {
@@ -121,9 +136,32 @@ $button-disabled-opacity: 0.5 !default;
                 box-shadow: none;
                 color: $color;
             }
+
+            &.btn-contrast {
+                color: $color-contrast;
+
+                &:active {
+                    //color: $color;
+                    background-color: darken($color,10%);
+                }
+            }
         }
 
-        &.btn-ghost {
+        &.btn-inverted {
+            color: $color;
+            background: $color-contrast;
+
+            &:hover, &.hovered {
+                background-color: darken($color-contrast,10%);
+            }
+
+            &:active, &.active {
+                //color: $color;
+                background-color: darken($color-contrast,5%);
+            }
+        }
+
+        &.btn-outline {
             background-color: transparent;
             border-color: $color;
             color: $color;
@@ -132,6 +170,10 @@ $button-disabled-opacity: 0.5 !default;
                 background-color: $color;
                 border-color: $color;
                 color: $color-contrast;
+            }
+
+            &:active, &.active {
+                background: darken($color, 20%);
             }
 
             &.is-loading {
@@ -146,23 +188,20 @@ $button-disabled-opacity: 0.5 !default;
                 box-shadow: none;
                 color: $color;
             }
-        }
 
-        &.btn-flat.btn-ghost {
-            background-color: transparent;
-            border-color: $color-contrast;
-            color: $color-contrast;
-
-            &:hover, &:focus {
-                background-color: $color-contrast;
-                color: $color;
-            }
-
-            &[disabled] {
-                background-color: transparent;
+            &.btn-contrast {
                 border-color: $color-contrast;
-                box-shadow: none;
                 color: $color-contrast;
+
+                &:hover, &:focus {
+                    background-color: $color-contrast;
+                    border-color: $color-contrast;
+                    color: $color;
+                }
+
+                &:active, &.active {
+                    background: darken($color-contrast, 10%);
+                }
             }
         }
     }
