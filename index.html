@@ -3,16 +3,16 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title></title>
+    <title>My placeholder title</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="apple-touch-icon" href="icon.png">
-    <!-- Place favicon.ico in the root directory -->
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="apple-touch-icon" href="img/icon.png" />
+    <!-- Place favicon.ico in the root directory - no need to reference it here then -->  
 
     <!--[if (gt IE 8) | (IEMobile)]><!-->
-    <link href="style/terraform.min.css" rel="stylesheet"><!--Recommend switching to min version on deployment-->
+    <link href="style/terraform.min.css" rel="stylesheet" /><!--Recommend switching to min version on deployment-->
     <!--<![endif]-->
     <!--[if (lt IE 9) & (!IEMobile)]>
     <link href="style/old-ie.min.css" rel="stylesheet">
@@ -21,8 +21,8 @@
     <!--<script type="text/javascript" src="vendor/jquery.min.js"></script>-->
     <!-- head javascript - end -->
     <!--my most used fonts - comment out unused-->
-    <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">    
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet"><!--serif-->
+    <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet" />    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet" /><!--serif-->
 </head>
 <body>
     <!--[if lte IE 9]>
@@ -86,20 +86,41 @@
                 <h2>Buttons</h2>
                 <h3>Buttons and button sizes.</h3>
 
-                <a class="btn btn-large btn-primary">default</a>
-                <a class="btn btn-large btn-raised btn-primary">Raised</a>
-                <a class="btn btn-large btn-outline btn-primary">Outline</a>
-                <a class="btn btn-large btn-primary btn-flat">Flat</a>
-
-
+                <a class="btn btn-large">Standard No Colour</a>
+                <a class="btn btn-large btn-primary">Standard Colour</a>
+                <a class="btn btn-large" disabled>disabled no colour</a>
                 <a class="btn btn-large btn-primary" disabled>disabled</a>
                 <br />
+
+                <a class="btn btn-large btn-raised">Raised No Colour</a>
+                <a class="btn btn-large btn-raised btn-primary">Raised Colour</a>
+
+                <br />
+
+                <a class="btn btn-large btn-circle btn-raised"><i class="fas fa-camera-retro fa-fw"></i></a>
                 <a class="btn btn-large btn-circle btn-raised btn-primary"><i class="fas fa-camera-retro fa-fw"></i></a>
                 <a class="btn btn-medium btn-circle btn-raised btn-primary"><i class="fas fa-camera-retro fa-fw"></i></a>
                 <a class="btn btn-circle btn-raised btn-primary"><i class="fas fa-camera-retro fa-fw"></i></a>
                 <a class="btn btn-small btn-circle btn-raised btn-primary"><i class="fas fa-camera-retro fa-fw"></i></a>
 
                 <br />
+
+                <a class="btn btn-large btn-outline">Outline No Colour</a>
+                <a class="btn btn-large btn-outline btn-primary">Outline</a>
+                <br />
+                <a class="btn btn-large btn-flat">Flat No Colour</a>
+                <a class="btn btn-large btn-primary btn-flat">Flat</a>
+                <a class="btn btn-large btn-primary btn-flat" disabled>Flat Disabled</a>
+                <br />
+
+
+                <a class="btn btn-large btn-circle btn-raised btn-primary"><i class="fas fa-camera-retro fa-fw"></i></a>
+                <a class="btn btn-medium btn-circle btn-raised btn-primary"><i class="fas fa-camera-retro fa-fw"></i></a>
+                <a class="btn btn-circle btn-raised btn-primary"><i class="fas fa-camera-retro fa-fw"></i></a>
+                <a class="btn btn-small btn-circle btn-raised btn-primary"><i class="fas fa-camera-retro fa-fw"></i></a>
+
+                <br />
+
                 <a class="btn btn-large btn-primary">Large</a>
                 <a class="btn btn-medium btn-primary">Medium</a>
                 <a class="btn btn-primary">Normal</a>
@@ -195,14 +216,14 @@
         </div>
     </footer>
 
-    <!-- START body javascript -->
+    <!-- START footer javascript -->
     <!-- ADD ALL YOUR BODY JAVASCRIPT FILES HERE - RECOMMEND BUNDLE AND MINIFY OF YOUR JS FILES -->
     <script src="js/nav-toggle.js"></script>
     <script src="vendor/@fortawesome/fontawesome/index.js"></script>
     <script src="vendor/@fortawesome/fontawesome-free-brands/index.js"></script>
     <script src="vendor/@fortawesome/fontawesome-free-regular/index.js"></script>
     <script src="vendor/@fortawesome/fontawesome-free-solid/index.js"></script>
-    <!-- END body javascript -->
+    <!-- END footer javascript -->
     <!-- inline js (e.g. Google Analytics code) here -->
     <!--<script>
     </script>-->

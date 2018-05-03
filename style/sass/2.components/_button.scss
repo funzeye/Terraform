@@ -17,13 +17,15 @@
 }
 
 // variables
-
-$button-border-color: $grey-lighter !default;
+$button-standard-text-color: $text-color;
+$button-standard-background-color: $grey-lighter !default;
+$button-border-color: $grey-light !default;
 $button-border-width: 3px;
 $button-disabled-background-color: $white !default;
 $button-disabled-border-color: $grey-lighter !default;
 $button-disabled-shadow: none !default;
 $button-disabled-opacity: 0.5 !default;
+$button-focused-shadow: 0 0 0 0.2em rgba(52, 208, 88, 0.4);
 
 // output
 
@@ -31,6 +33,8 @@ $button-disabled-opacity: 0.5 !default;
 
 //default btn
 .btn {
+    color: $button-standard-text-color;
+    background: $button-standard-background-color;
     display: inline-block;
     position: relative;
     cursor: pointer;
@@ -54,6 +58,19 @@ $button-disabled-opacity: 0.5 !default;
         padding: 5px 10px;
     }
 
+    &:hover, &.hovered {
+        background: darken($button-standard-background-color, 10%);
+    }
+
+    &:focus:not(:active), &.focused:not(:active) {
+        box-shadow: $button-focused-shadow;
+    }
+
+    &:active, &.active {
+        background: darken($button-standard-background-color, 20%);
+        border-color: darken($button-standard-background-color, 40%);
+    }
+
     &[disabled] {
         @extend is-unselectable;
         background-color: $button-disabled-background-color;
@@ -61,20 +78,28 @@ $button-disabled-opacity: 0.5 !default;
         box-shadow: $button-disabled-shadow;
         opacity: $button-disabled-opacity;
     }
-}
 
+    &.btn-outline {
+        background-color: transparent;
+    }
+
+    &.btn-flat {
+        background-color: transparent;
+        border-color: transparent;
+    }
+}
 //raised
 .btn-raised {
     @include btn-shadow;
 }
-
 
 //circle floating action
 .btn-circle {
     margin: 0;
     text-align: center;
     line-height: normal;
-    padding:7.5px;
+    padding: 7.5px;
+
     & {
         border-radius: 100%;
     }
@@ -93,21 +118,17 @@ $button-disabled-opacity: 0.5 !default;
 }
 
 ///////////////////////////////////////////////////
-
 @each $name, $pair in $colors {
     $color: nth($pair, 1);
     $color-contrast: nth($pair, 2);
+
     .btn-#{$name} {
         color: $color-contrast;
         background: $color;
-        border: 1px solid transparent;
+        border-color: transparent;
 
         &:hover, &.hovered {
             background: darken($color, 10%);
-        }
-
-        &:focus:not(:active), &.focused:not(:active) {
-            box-shadow: 0 0 0 0.2em rgba(52, 208, 88, 0.4);
         }
 
         &:active, &.active {
@@ -117,31 +138,21 @@ $button-disabled-opacity: 0.5 !default;
         &[disabled] {
             background-color: $color;
             border-color: transparent;
-            box-shadow: none;
         }
 
         &.btn-flat {
-            // background-color: $color-contrast;
             background-color: transparent;
             color: $color;
             border-color: transparent;
 
-            &:active {
+            &:active:not([disabled]) {
                 background-color: $color-contrast;
-            }
-
-            &[disabled] {
-                background-color: $color-contrast;
-                border-color: transparent;
-                box-shadow: none;
-                color: $color;
             }
 
             &.btn-contrast {
                 color: $color-contrast;
 
                 &:active {
-                    //color: $color;
                     background-color: darken($color,10%);
                 }
             }
@@ -176,12 +187,6 @@ $button-disabled-opacity: 0.5 !default;
                 background: darken($color, 20%);
             }
 
-            &.is-loading {
-                &:after {
-                    border-color: transparent transparent $color $color !important;
-                }
-            }
-
             &[disabled] {
                 background-color: transparent;
                 border-color: $color;
@@ -205,26 +210,4 @@ $button-disabled-opacity: 0.5 !default;
             }
         }
     }
-}
-
-//==============================================================
-
-//Ripple Efect
-.ripple { /*stylings for the circular overlay*/
-	position: absolute;
-	border-radius: 100%;
-	width: 0;
-	height: 0;
-	background: rgba(0,0,0, .05);
-	-moz-transition: all .3s ease-out;
-	-o-transition: all .3s ease-out;
-	-webkit-transition: all .3s ease-out;
-	transition: all .3s ease-out;
-}
-
-.notransition { /*used to reset the ripple without an animatiion*/
-	-moz-transition: none !important;
-	-o-transition: none !important;
-	-webkit-transition: none !important;
-	transition: none !important;
 }
