@@ -2,8 +2,7 @@
 
 ## New Proposed Sass Folder Structure:
 0. Utilities - helper classes that will go on top of regular components/areas/elements. It took me a while to get my head around why I would need this folder and set of classes but I thought of a good example that helped clarify it for me --> a clearfix utlitiy class - imagine we want clearfix and non-clearfix versions for 10 of our components in components folder - we could create these in the components partials - we would then have 20 different class components, 10 clearfix versions and 10 non-clearfix. However if we just create a clearfix helper class we then only have 11 classes - the 10 non-clearfix components and the clearifx utility. You can see why this is a smarter way to do things I should think!
-1. Pages - This is the folder for page specific changes, files named after pages, e.g. home, about-us.scss - very specific css - should only apply to that page only - Will probably delete this as it will probably not be neccessary
-if it applies across multiple pages then it should actually be in components/areas section...
+1. Pages(Shame) - This is the folder for page specific changes, files named after pages, e.g. home, about-us.scss - very specific css - should only apply to that page only - Will probably delete this as it will probably not be neccessary. Pretty much everything should be covered in folders 2 to 5 to not need this folder.
 2. Components - Small re-usable one html level deep components e.g. buttons - only using class selectors - more explicitly named compared to 
 next section 3 - e.g. `.product-list{}`
 3. Areas - many call this type of folder "modules", "layout" or "objects" - I prefer 'area' as its more natural language in line with
