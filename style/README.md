@@ -33,7 +33,7 @@ Helpers and placeholders/mixins:
 - Helper = used as auxillery styling for exceptional versions of a component - can be used by different types of components.
 -- e.g. 5 buttons and 5 images on screen - is-disabled helper class applied to just 1 of the 5 buttons and 1 of the 5 images - is-disabled css appears in source of just those 2 components.
 
-We won't have a sass vendors folder as these files will be loaded in using Yarn at project development time to ensure we get the most up to date versions.
+We won't have a sass vendors folder as these files will be loaded in using Yarn at project development time to ensure we get the most up to date versions. They will be referenced in the imports folder however, just ensure the paths are still correct with your versions of the package.
 
 for the above structure I took inspiration from both ITCSS and 7-1 folder structures mainly - but changed the parts I didnt feel comfortable with. I will 
 probably add another folder for animations as my animations library grows.
@@ -41,4 +41,4 @@ probably add another folder for animations as my animations library grows.
 ## Rules to Follow:
 1. If a mixin has 0 arguments then change it to a placeholder - makes for DRYer CSS.
 2. If mixins, functions, and variables are specific to a particluar partial file then consider moving them into that file
-3. Never go more then 3 levels deep with our nesting
+3. Never go more then 3 levels deep with your nesting
