@@ -1,4 +1,4 @@
-#TO DO
+# TO DO
 - Remove support for old IE Browsers
  
 # SCSS OO Architecture Details
