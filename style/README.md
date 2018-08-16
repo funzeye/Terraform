@@ -1,4 +1,7 @@
-﻿# SCSS OO Architecture Details
+#TO DO
+- Remove support for old IE Browsers
+ 
+# SCSS OO Architecture Details
 
 ## New Proposed Sass Folder Structure:
 0. Utilities - helper classes that will go on top of regular components/areas/elements. It took me a while to get my head around why I would need this folder and set of classes but I thought of a good example that helped clarify it for me --> a clearfix utlitiy class - imagine we want clearfix and non-clearfix versions for 10 of our components in components folder - we could create these in the components partials - we would then have 20 different class components, 10 clearfix versions and 10 non-clearfix. However if we just create a clearfix helper class we then only have 11 classes - the 10 non-clearfix components and the clearifx utility. You can see why this is a smarter way to do things I should think!
