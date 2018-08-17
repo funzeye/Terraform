@@ -1,45 +1,30 @@
 # TO DO
 - Remove support for old IE Browsers
+- Split components in two -  components and patterns?
+    * components are reusable (think accordion) that can exist on their own
+    * patterns are not reusable (think header) and can contain other components
  
 # SCSS OO Architecture Details
 
 ## New Proposed Sass Folder Structure:
-0. Utilities - helper classes that will go on top of regular components/areas/elements. It took me a while to get my head around why I would need this folder and set of classes but I thought of a good example that helped clarify it for me --> a clearfix utlitiy class - imagine we want clearfix and non-clearfix versions for 10 of our components in components folder - we could create these in the components partials - we would then have 20 different class components, 10 clearfix versions and 10 non-clearfix. However if we just create a clearfix helper class we then only have 11 classes - the 10 non-clearfix components and the clearifx utility. You can see why this is a smarter way to do things I should think!
-1. Pages(Shame) - This is the folder for page specific changes, files named after pages, e.g. home, about-us.scss - very specific css - should only apply to that page only - Will probably delete this as it will probably not be neccessary. Pretty much everything should be covered in folders 2 to 5 to not need this folder.
-2. Components - Small re-usable one html level deep components e.g. buttons - only using class selectors - more explicitly named compared to 
-next section 3 - e.g. `.product-list{}`
-3. Areas - many call this type of folder "modules", "layout" or "objects" - I prefer 'area' as its more natural language in line with
-what I actually use when describing things in this folder e.g. the "header area" - other areas include sidebar, footer, nav etc - only use 
-class names - however they should be agnostically named, e.g. `.ui-list{}`
-4. Elements - basic styling for all html elements e.g. h1, a, li - should be no classes defined in these files - also we should 
-not see use any element selectors in the folders above this one (1-3).
-5. Base - some boilerplate global scope css for the project - e.g. elements to fix issues with default html browser rendering - normalize.scss -- 
-also rules you expect to follow across sites e.g. setting base font size, box sizing model, etc - should not need to alter much of the scss in these 
-files - layer 5 is first folder that produces some css 
-6. Utilities - e.g. mixins, functions, variables - most files in this folder should not need to be altered from site to site 
+0. Helpers - helper classes that will go on top of regular components/areas/elements. It took me a while to get my head around why I would need this folder and set of classes but I thought of a good example that helped clarify it for me --> a clearfix utlitiy class - imagine we want clearfix and non-clearfix versions for 10 of our components in components folder - we could create these in the components partials - we would then have 20 different class components, 10 clearfix versions and 10 non-clearfix. However if we just create a clearfix helper class we then only have 11 classes - the 10 non-clearfix components and the clearifx utility. You can see why this is a smarter way to do things I should think!
+1. Components - Discrete re-usable components e.g. buttons - only using class selectors - more explicitly named - they are *things*
+2. Layout - CSS concerned with layout as opposed to style - free of visual styling - abstract - examples include wrapper, media object and grids - uses class selectors
+3. Elements - basic styling for all html elements e.g. h1, a, li - should be no classes defined in these files - also we should 
+not see use any element selectors in the folders above this one (0 to 3).
+4. Base - some boilerplate global scope css for the project - e.g. elements to fix issues with default html browser rendering - normalize.scss -- also rules you expect to follow across sites e.g. setting base font size, box sizing model, etc - should not need to alter much of the scss in these files - layer 5 is first folder that produces some css -
+5. Utilities - e.g. mixins, functions, variables - most files in this folder should not need to be altered from site to site 
 (except for the media query breakpoints) - this folder should not produce any css
-7. Settings - files containing basic style settings for current site that you will probably wish to alter e.g. colour.scss - should not produce any css
-
-To be Added:
-A level 0 for 'helpers' folder:
-- for example if we want a class that applies the clearfix mixin where we need it applied to different types of components 
-and only certain versions of those components we could use a helper class. 
-- we could then use it in the html by simply adding '.clearfix' to the html instead of adding clearfix mixin into all components/areas/elements that need it.
-- should help with keeping code dry.
+6. Settings - files containing basic style settings for current site that you will probably wish to alter e.g. colour.scss - should not produce any css
 
 Helpers and placeholders/mixins:
 1. Always start with the placeholder/mixin - this is where the scss will be maintained
 2. All helper classes should inherit their css from an existing mixin/placeholder where possible
 3. Only create a helper class if it can be re-usable - if it's only going to be used by one component then maybe add that scss to the component class instead.
-- Placeholder/Mixin = used as base styling for a component and seen across all instances of that component - can be used by different types of components.
--- e.g. 5 buttons and 5 images on screen - clearfix placeholder applied to all 10 components - clearfix css seen in source of all 10.
-- Helper = used as auxillery styling for exceptional versions of a component - can be used by different types of components.
--- e.g. 5 buttons and 5 images on screen - is-disabled helper class applied to just 1 of the 5 buttons and 1 of the 5 images - is-disabled css appears in source of just those 2 components.
 
 We won't have a sass vendors folder as these files will be loaded in using Yarn at project development time to ensure we get the most up to date versions. They will be referenced in the imports folder however, just ensure the paths are still correct with your versions of the package.
 
-for the above structure I took inspiration from both ITCSS and 7-1 folder structures mainly - but changed the parts I didnt feel comfortable with. I will 
-probably add another folder for animations as my animations library grows.
+for the above structure I took inspiration from ITCSS, 7-1 folder structure and [this article](https://css-tricks.com/combining-the-powers-of-sem-and-bio-for-improving-css/) mainly - but changed the parts I didnt feel comfortable with. I will probably add another folder for animations as my animations library grows.
 
 ## Rules to Follow:
 1. If a mixin has 0 arguments then change it to a placeholder - makes for DRYer CSS.
