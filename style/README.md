@@ -12,7 +12,7 @@
 2. Layout - CSS concerned with layout as opposed to style - free of visual styling - abstract - examples include wrapper, media object and grids - uses class selectors
 3. Elements - basic styling for all html elements e.g. h1, a, li - should be no classes defined in these files - also we should 
 not see use any element selectors in the folders above this one (0 to 3).
-4. Base - some boilerplate global scope css for the project - e.g. elements to fix issues with default html browser rendering - normalize.scss -- also rules you expect to follow across sites e.g. setting base font size, box sizing model, etc - should not need to alter much of the scss in these files - layer 5 is first folder that produces some css -
+4. Base - some boilerplate global scope css for the project - e.g. elements to fix issues with default html browser rendering - normalize.scss -- also rules you expect to follow across sites e.g. setting base font size, box sizing model, etc - should not need to alter much of the scss in these files - layer 4 is first folder that produces some css -
 5. Utilities - e.g. mixins, functions, variables - most files in this folder should not need to be altered from site to site 
 (except for the media query breakpoints) - this folder should not produce any css
 6. Settings - files containing basic style settings for current site that you will probably wish to alter e.g. colour.scss - should not produce any css
